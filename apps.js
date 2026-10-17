@@ -34,10 +34,10 @@ const appCategories = [
         "icon": "/assets/images/apps/foxone/icon.png"
       },
       {
-        "title": "Threads",
-        "ratings": 4.2,
-        "appurl": "/app/threads/",
-        "icon": "/assets/images/apps/threads/icon.webp"
+        "title": "StoryReel: Exclusive Drama",
+        "ratings": 4.4,
+        "appurl": "/app/com.storyreel.tv.android/",
+        "icon": "/assets/images/apps/StoryReel/icon.png"
       },
       {
         "title": "Pinterest",

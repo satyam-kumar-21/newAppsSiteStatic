@@ -132,25 +132,27 @@
             ]
           },
           {
-            "appurl": "/app/threads/",
-            "title": "Threads",
-            "icon": "/assets/images/apps/threads/icon.webp",
-            "ratings": 4.2,
-            "ratings-counts": 3500000,
-            "downloads": "100M+",
+            "appurl": "/app/com.storyreel.tv.android/",
+            "title": "StoryReel: Exclusive Drama",
+            "icon": "/assets/images/apps/StoryReel/icon.png",
+            "ratings": 4.4,
+            "ratings-counts": "413K reviews",
+            "downloads": "10M+",
             "category": "Entertainment",
-            "latest-version": "315.0.0",
-            "publish-date": "2026-10-05",
-            "developer": "Instagram",
+            "latest-version": "2.25.0",
+            "publish-date": "04/07/2026",
+            "developer": "Equinox Enterprises‌ Technology Limited",
             "security": "100% Safe",
             "price": "Free",
-            "description1": "Share text updates, start thread discussions, and engage with followers.",
-            "description2": "Connect with creators and friends across a decentralized network.",
-            "playstore-url": "https://play.google.com/store/apps/details?id=com.instagram.barcelona",
-            "appstore-url": "https://apps.apple.com/app/threads-an-instagram-app/id6446901002",
+            "description1": "<h3>Features of StoryReel: Exclusive Drama</h3><h6>Exclusive Drama Series</h6><p>Browse a collection of original drama series and exclusive episodes arranged by genre and release date. Discover compelling stories and regularly updated content designed to keep viewers entertained with fresh episodes.</p><h6>Tailored Content Recommendations</h6><p>Find dramas that match your interests through personalized suggestions based on your viewing activity and ratings. Recommendations adapt to your preferences over time, making it easier to explore relevant series through a clean and user-friendly interface.</p><h6>Offline Downloads and Flexible Playback</h6><p>Download selected episodes to watch without an internet connection, with available video quality and storage options to manage your downloads. Resume playback from where you stopped and use convenient playback controls for a seamless viewing experience.</p>",
+            "playstore-url": "https://play.google.com/store/apps/details?id=com.storyreel.tv.android&hl=en&gl=us",
             "screenshots": [
-              "/assets/images/apps/threads/screenshot-1.webp",
-              "/assets/images/apps/threads/screenshot-2.webp"
+              "/assets/images/apps/StoryReel/screenshot-1.webp",
+              "/assets/images/apps/StoryReel/screenshot-2.webp",
+              "/assets/images/apps/StoryReel/screenshot-3.webp",
+              "/assets/images/apps/StoryReel/screenshot-4.webp",
+              "/assets/images/apps/StoryReel/screenshot-5.webp",
+              "/assets/images/apps/StoryReel/screenshot-6.webp"
             ]
           },
           {
