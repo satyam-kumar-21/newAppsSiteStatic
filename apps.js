@@ -16,22 +16,22 @@ const appCategories = [
         "icon": "/assets/images/apps/PineDrama/icon.png"
       },
       {
-        "title": "Instagram",
+        "title": "BlinkDrama: Short Dramas & TV",
         "ratings": 4.5,
-        "appurl": "/app/instagram/",
-        "icon": "/assets/images/apps/instagram/icon.webp"
+        "appurl": "/app/com.blink.drama.player/",
+        "icon": "/assets/images/apps/BlinkDrama/icon.png"
       },
       {
-        "title": "X",
-        "ratings": 4.1,
-        "appurl": "/app/x-twitter/",
-        "icon": "/assets/images/apps/x-twitter/icon.webp"
+        "title": "FreeDrama: Short Drama & Reels",
+        "ratings": 4.6,
+        "appurl": "/app/com.drama.free/",
+        "icon": "/assets/images/apps/FreeDrama/icon.png"
       },
       {
-        "title": "Reddit",
-        "ratings": 4.3,
-        "appurl": "/app/reddit/",
-        "icon": "/assets/images/apps/reddit/icon.webp"
+        "title": "FOX One: Live News, Sports, TV",
+        "ratings": 4.5,
+        "appurl": "/app/com.fox.foxone/",
+        "icon": "/assets/images/apps/foxone/icon.png"
       },
       {
         "title": "Threads",
@@ -460,6 +460,12 @@ if (categoryList && pageTitle && pageDescription) {
   const parameters = new URLSearchParams(window.location.search);
   const requestedSlug = parameters.get("category");
   const searchQuery = parameters.get("q")?.trim() || "";
+  if (searchQuery || requestedSlug) {
+    const robotsMeta = document.querySelector('meta[name="robots"]');
+    if (robotsMeta) {
+      robotsMeta.content = "noindex, follow";
+    }
+  }
   const normalizedQuery = searchQuery.toLocaleLowerCase();
   const searchResults = searchQuery
     ? (window.catalogSearchItems || []).filter((app) =>
@@ -636,6 +642,7 @@ if (categoryList && pageTitle && pageDescription) {
   }
 
   if (searchQuery) {
+    categoryList.replaceChildren();
     const resultCount = searchResults.length;
     pageTitle.textContent = `Search results for "${searchQuery}"`;
     pageDescription.textContent = resultCount
@@ -677,6 +684,7 @@ if (categoryList && pageTitle && pageDescription) {
     }
     categoryList.append(section, createAdSlot("search-results"));
   } else if (requestedSlug && !selectedCategory) {
+    categoryList.replaceChildren();
     pageTitle.textContent = "App category not found";
     pageDescription.textContent = "The requested app category is unavailable. Browse all app categories below.";
     document.title = "App Category Not Found | BRANDNAME";
@@ -687,6 +695,7 @@ if (categoryList && pageTitle && pageDescription) {
       categoryList.append(createCategorySection(category, false), createAdSlot(`apps-${category.slug}`));
     });
   } else if (selectedCategory) {
+    categoryList.replaceChildren();
     pageTitle.textContent = `All ${selectedCategory.name} apps`;
     pageDescription.textContent = `Browse every ${selectedCategory.name.toLowerCase()} app in our catalog, with ratings and links to each app.`;
     document.title = `All ${selectedCategory.name} Apps | BRANDNAME`;
@@ -704,9 +713,11 @@ if (categoryList && pageTitle && pageDescription) {
       createAdSlot(`apps-${selectedCategory.slug}`),
     );
   } else {
-    appCategories.forEach((category) => {
-      categoryList.append(createCategorySection(category, false), createAdSlot(`apps-${category.slug}`));
-    });
+    if (categoryList.childElementCount === 0) {
+      appCategories.forEach((category) => {
+        categoryList.append(createCategorySection(category, false), createAdSlot(`apps-${category.slug}`));
+      });
+    }
     if (metaDescription) {
       metaDescription.content = pageDescription.textContent.trim();
     }

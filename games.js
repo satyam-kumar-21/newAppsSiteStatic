@@ -280,6 +280,12 @@ if (categoryList && pageTitle && pageDescription) {
   const parameters = new URLSearchParams(window.location.search);
   const requestedSlug = parameters.get("category");
   const searchQuery = parameters.get("q")?.trim() || "";
+  if (searchQuery || requestedSlug) {
+    const robotsMeta = document.querySelector('meta[name="robots"]');
+    if (robotsMeta) {
+      robotsMeta.content = "noindex, follow";
+    }
+  }
   const normalizedQuery = searchQuery.toLocaleLowerCase();
   const searchResults = searchQuery
     ? (window.catalogSearchItems || []).filter((app) =>
@@ -456,6 +462,7 @@ if (categoryList && pageTitle && pageDescription) {
   }
 
   if (searchQuery) {
+    categoryList.replaceChildren();
     const resultCount = searchResults.length;
     pageTitle.textContent = `Search results for "${searchQuery}"`;
     pageDescription.textContent = resultCount
@@ -497,6 +504,7 @@ if (categoryList && pageTitle && pageDescription) {
     }
     categoryList.append(section, createAdSlot("search-results"));
   } else if (requestedSlug && !selectedCategory) {
+    categoryList.replaceChildren();
     pageTitle.textContent = "App category not found";
     pageDescription.textContent = "The requested game category is unavailable. Browse all game categories below.";
     document.title = "Game Category Not Found | BRANDNAME";
@@ -507,6 +515,7 @@ if (categoryList && pageTitle && pageDescription) {
       categoryList.append(createCategorySection(category, false), createAdSlot(`games-${category.slug}`));
     });
   } else if (selectedCategory) {
+    categoryList.replaceChildren();
     pageTitle.textContent = `All ${selectedCategory.name} games`;
     pageDescription.textContent = `Browse every ${selectedCategory.name.toLowerCase()} game in our catalog, with ratings and links to each game.`;
     document.title = `All ${selectedCategory.name} Games | BRANDNAME`;
@@ -524,9 +533,11 @@ if (categoryList && pageTitle && pageDescription) {
       createAdSlot(`games-${selectedCategory.slug}`),
     );
   } else {
-    appCategories.forEach((category) => {
-      categoryList.append(createCategorySection(category, false), createAdSlot(`games-${category.slug}`));
-    });
+    if (categoryList.childElementCount === 0) {
+      appCategories.forEach((category) => {
+        categoryList.append(createCategorySection(category, false), createAdSlot(`games-${category.slug}`));
+      });
+    }
     if (metaDescription) {
       metaDescription.content = pageDescription.textContent.trim();
     }
