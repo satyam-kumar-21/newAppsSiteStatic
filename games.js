@@ -319,10 +319,15 @@ if (categoryList && pageTitle && pageDescription) {
 
   function createAppCard(app, category) {
     const appCategoryName = app.categoryName || category.name;
+    const ratingValue = Number(app.ratings);
+    const hasRating = app.ratings !== undefined && app.ratings !== null && String(app.ratings).trim() !== "" && Number.isFinite(ratingValue);
     const card = document.createElement("a");
     card.className = "app-card";
     card.href = getAppPageUrl(app);
-    card.setAttribute("aria-label", `${app.title}, ${appCategoryName}, rated ${app.ratings} out of 5`);
+    card.setAttribute(
+      "aria-label",
+      hasRating ? `${app.title}, ${appCategoryName}, rated ${ratingValue.toFixed(1)} out of 5` : `${app.title}, ${appCategoryName}`,
+    );
 
     const icon = document.createElement("span");
     icon.className = "app-card-icon";
@@ -357,20 +362,23 @@ if (categoryList && pageTitle && pageDescription) {
     categoryLabel.className = "app-card-category";
     categoryLabel.textContent = appCategoryName;
 
-    const rating = document.createElement("span");
-    rating.className = "app-card-rating";
-    rating.setAttribute("aria-label", `Rated ${app.ratings} out of 5`);
+    copy.append(title, categoryLabel);
+    if (hasRating) {
+      const rating = document.createElement("span");
+      rating.className = "app-card-rating";
+      rating.setAttribute("aria-label", `Rated ${ratingValue.toFixed(1)} out of 5`);
 
-    const star = document.createElement("span");
-    star.className = "app-card-star";
-    star.setAttribute("aria-hidden", "true");
-    star.textContent = "★";
+      const star = document.createElement("span");
+      star.className = "app-card-star";
+      star.setAttribute("aria-hidden", "true");
+      star.textContent = "★";
 
-    const ratingValue = document.createElement("span");
-    ratingValue.textContent = app.ratings.toFixed(1);
+      const ratingText = document.createElement("span");
+      ratingText.textContent = ratingValue.toFixed(1);
 
-    rating.append(star, ratingValue);
-    copy.append(title, categoryLabel, rating);
+      rating.append(star, ratingText);
+      copy.append(rating);
+    }
     card.append(icon, copy);
     return card;
   }
@@ -392,7 +400,7 @@ if (categoryList && pageTitle && pageDescription) {
     if (!showAll) {
       const viewAll = document.createElement("a");
       viewAll.className = "apps-view-all";
-      viewAll.href = `games.html?category=${encodeURIComponent(category.slug)}#category-${encodeURIComponent(category.slug)}`;
+      viewAll.href = `games.html?category=${encodeURIComponent(category.slug)}`;
       viewAll.setAttribute("aria-label", `View all ${category.name} games`);
       viewAll.title = `View all ${category.name} games`;
 

@@ -1,28 +1,29 @@
 {
   "apps": {
     "subcategories": {
-      "social": {
+      "Entertainment": {
         "apps": [
           {
-            "appurl": "/app/facebook/",
-            "title": "Facebook",
-            "icon": "/assets/images/apps/facebook/icon.webp",
-            "ratings": 4.3,
-            "ratings-counts": 145000000,
-            "downloads": "5B+",
+            "appurl": "/app/com.ss.android.ugc.tiktok.pro/",
+            "title": "TikTok Pro - Events",
+            "icon": "/assets/images/apps/TikTok-Pro/icon.png",
+            "ratings": 4.4,
+            "ratings-counts": "52.8K reviews",
+            "downloads": "10M+",
             "category": "Apps",
-            "latest-version": "540.0.0.0.0",
-            "publish-date": "2026-10-01",
-            "developer": "Meta Platforms, Inc.",
-            "security": "Unverified",
+            "latest-version": "47.0.3",
+            "publish-date": "06/02/2026",
+            "developer": "TikTok Pte. Ltd.",
+            "security": "100% Safe",
             "price": "Free",
-            "description1": "<h5>Connect with friends</h5>, share posts, watch videos, and discover communities.",
-            "description2": "Stay updated with photos, marketplace listings, groups, and personalized content.",
-            "playstore-url": "https://play.google.com/store/apps/details?id=com.facebook.katana",
-            "appstore-url": "https://apps.apple.com/app/facebook/id284882215",
+            "description1": "<h3>Features of TikTok Pro - Events</h3><h6>Discover Events</h6><p>Explore a personalized event feed featuring local activities and events based on your interests. Use filters for dates, locations, and event types to find experiences that match your preferences.</p><h6>Live Event Broadcasting</h6><p>Stream concerts, performances, and interactive sessions in real time. Organizers can engage online audiences through moderated live chats, guest participation, and instant reactions.</p><h6>Event Analytics and Marketing</h6><p>Monitor event performance with insights into views, audience engagement, and ticket sales. Promote upcoming events by scheduling content and reaching relevant audiences to increase visibility and attendance.</p>",
+            "playstore-url": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.tiktok.pro&hl=en&gl=us",
             "screenshots": [
-              "/assets/images/apps/facebook/screenshot-1.webp",
-              "/assets/images/apps/facebook/screenshot-2.webp"
+              "/assets/images/apps/TikTok-Pro/screenshot-1.webp",
+              "/assets/images/apps/TikTok-Pro/screenshot-2.webp",
+              "/assets/images/apps/TikTok-Pro/screenshot-3.webp",
+              "/assets/images/apps/TikTok-Pro/screenshot-4.webp",
+              "/assets/images/apps/TikTok-Pro/screenshot-5.webp"
             ]
           },
           {

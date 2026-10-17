@@ -185,12 +185,53 @@ function safeLocalPath(value, fieldName) {
   return value;
 }
 
-function getPagePath(app) {
-  const appUrl = safeLocalPath(app.appurl, `${app.title} appurl`).replace(/\/+$/, "");
-  if (!appUrl.startsWith(ROUTE_PREFIX) || appUrl.length <= ROUTE_PREFIX.length) {
-    throw new Error(`Expected a ${ITEM_LABEL} URL under ${ROUTE_PREFIX}: ${app.appurl}`);
+function slugify(value) {
+  return String(value ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getDetailPath(item, routePrefix, itemLabel) {
+  const title = typeof item.title === "string" ? item.title.trim() : "";
+  let appUrl = typeof item.appurl === "string" ? item.appurl.trim() : "";
+  if (!appUrl) {
+    appUrl = slugify(title);
+    if (!appUrl) {
+      throw new Error(`A ${itemLabel} needs a title or appurl to generate its detail page.`);
+    }
+  }
+
+  if (!appUrl.startsWith("/")) {
+    if (!/^[a-z0-9._~-]+$/i.test(appUrl)) {
+      throw new Error(`Invalid ${itemLabel} URL: ${item.appurl}`);
+    }
+    appUrl = `/${appUrl}`;
+  }
+  appUrl = safeLocalPath(appUrl, `${title || itemLabel} appurl`).replace(/\/+$/, "");
+
+  if (!appUrl.startsWith(routePrefix)) {
+    const routeSlug = appUrl.slice(1);
+    if (!routeSlug || routeSlug.includes("/")) {
+      throw new Error(`Expected a ${itemLabel} URL under ${routePrefix}, or a single route slug: ${item.appurl}`);
+    }
+    appUrl = `${routePrefix}${routeSlug}`;
+  }
+  if (appUrl.length <= routePrefix.length) {
+    throw new Error(`Expected a ${itemLabel} URL under ${routePrefix}: ${item.appurl}`);
   }
   return `${appUrl}.html`;
+}
+
+function getPagePath(app) {
+  return getDetailPath(app, ROUTE_PREFIX, ITEM_LABEL);
+}
+
+function getTitleFromPath(pagePath, routePrefix) {
+  const slug = pagePath.slice(routePrefix.length, -".html".length).split("/").pop();
+  return slug.split(/[._-]+/).filter(Boolean).map((part) => part[0].toUpperCase() + part.slice(1)).join(" ");
 }
 
 function absoluteUrl(localPath) {
@@ -226,15 +267,22 @@ function loadCategories() {
     const slug = category.slug || key;
     const name = category.name || CATEGORY_LABELS[slug] || slug.split("-").map((part) => part[0].toUpperCase() + part.slice(1)).join(" ");
     const apps = category.apps.map((app) => {
-      if (!app || !app.title || !app.appurl) {
-        throw new Error(`An app in category "${name}" is missing its title or appurl.`);
+      if (!app || typeof app !== "object") {
+        throw new Error(`An item in category "${name}" must be an object.`);
       }
       const outputPath = getPagePath(app);
       if (outputPaths.has(outputPath.toLowerCase())) {
         throw new Error(`More than one app maps to ${outputPath}.`);
       }
       outputPaths.add(outputPath.toLowerCase());
-      return { ...app, categoryName: name, categorySlug: slug, pagePath: outputPath };
+      return {
+        ...app,
+        title: typeof app.title === "string" && app.title.trim() ? app.title.trim() : getTitleFromPath(outputPath, ROUTE_PREFIX),
+        appurl: outputPath.slice(0, -".html".length) + "/",
+        categoryName: name,
+        categorySlug: slug,
+        pagePath: outputPath,
+      };
     });
     return { name, slug, apps };
   });
@@ -273,14 +321,14 @@ function loadHomeCategories(type) {
     const slug = category.slug || key;
     const name = category.name || labels[slug] || slug.split("-").map((part) => part[0].toUpperCase() + part.slice(1)).join(" ");
     const apps = category.apps.slice(0, 9).map((app) => {
-      if (!app?.title || !app.appurl) {
-        throw new Error(`An item in category "${name}" is missing its title or appurl.`);
+      if (!app || typeof app !== "object") {
+        throw new Error(`An item in category "${name}" must be an object.`);
       }
-      const url = safeLocalPath(app.appurl, `${app.title} URL`).replace(/\/+$/, "");
-      if (!url.startsWith(routePrefix) || url.length <= routePrefix.length) {
-        throw new Error(`Expected ${app.title} to have a URL under ${routePrefix}.`);
-      }
-      return { ...app, detailUrl: `${url}.html` };
+      const detailUrl = getDetailPath(app, routePrefix, type === "apps" ? "app" : "game");
+      const title = typeof app.title === "string" && app.title.trim()
+        ? app.title.trim()
+        : getTitleFromPath(detailUrl, routePrefix);
+      return { ...app, title, detailUrl };
     });
     return { name, slug, apps, type, catalogName: type === "apps" ? "Apps" : "Games" };
   });
@@ -301,18 +349,18 @@ function writeSearchIndex() {
       const slug = category.slug || key;
       const categoryName = category.name || labels[slug] || slug.split("-").map((part) => part[0].toUpperCase() + part.slice(1)).join(" ");
       return category.apps.map((item) => {
-        if (!item?.title || !item.appurl) {
-          throw new Error(`An item in category "${categoryName}" is missing its title or appurl.`);
+        if (!item || typeof item !== "object") {
+          throw new Error(`An item in category "${categoryName}" must be an object.`);
         }
-        const appUrl = safeLocalPath(item.appurl, `${item.title} URL`).replace(/\/+$/, "");
         const routePrefix = type === "apps" ? "/app/" : "/game/";
-        if (!appUrl.startsWith(routePrefix) || appUrl.length <= routePrefix.length) {
-          throw new Error(`Expected ${item.title} to have a URL under ${routePrefix}.`);
-        }
+        const detailPath = getDetailPath(item, routePrefix, type === "apps" ? "app" : "game");
+        const title = typeof item.title === "string" && item.title.trim()
+          ? item.title.trim()
+          : getTitleFromPath(detailPath, routePrefix);
         return {
-          title: item.title,
+          title,
           ratings: item.ratings,
-          appurl: item.appurl,
+          appurl: detailPath.slice(0, -".html".length) + "/",
           icon: item.icon,
           categoryName,
           categorySlug: slug,
@@ -326,8 +374,31 @@ function writeSearchIndex() {
   fs.writeFileSync(SEARCH_INDEX_FILE, `window.catalogSearchItems = ${json};\n`, "utf8");
 }
 
+function updateAppsListingScript() {
+  const appsScriptPath = path.join(ROOT, "apps.js");
+  const currentScript = fs.readFileSync(appsScriptPath, "utf8");
+  const rendererStart = currentScript.indexOf("const categoryList = document.querySelector");
+  if (rendererStart < 0) {
+    throw new Error("Could not locate the app category renderer in apps.js.");
+  }
+
+  const categories = loadCategories().map((category) => ({
+    name: category.name,
+    slug: category.slug,
+    apps: category.apps.map((app) => ({
+      title: app.title,
+      ratings: app.ratings,
+      appurl: app.appurl,
+      icon: app.icon,
+    })),
+  }));
+  const dataScript = `const appCategories = ${JSON.stringify(categories, null, 2)};\n\n`;
+  const renderer = currentScript.slice(rendererStart);
+  fs.writeFileSync(appsScriptPath, `${dataScript}${renderer}`, "utf8");
+}
+
 function renderHomeCategory(category) {
-  const categoryUrl = `/${category.type}.html?category=${encodeURIComponent(category.slug)}#category-${encodeURIComponent(category.slug)}`;
+  const categoryUrl = `/${category.type}.html?category=${encodeURIComponent(category.slug)}`;
   const cards = category.apps.map((app) => {
     const iconContent = app.icon
       ? `<img src="${escapeHtml(safeLocalPath(app.icon, `${app.title} icon`))}" alt="" loading="lazy" width="56" height="56" />`
@@ -475,13 +546,19 @@ function renderScreenshots(app) {
 function renderStoreLinks(app) {
   const playStore = safeExternalUrl(app["playstore-url"]);
   const appStore = safeExternalUrl(app["appstore-url"]);
-  if (!playStore && !appStore) {
-    return "";
-  }
+  const playIcon = '<svg class="app-detail-store-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.3 2.6 14.2 12 3.3 21.4c-.2-.3-.3-.7-.3-1.1V3.7c0-.4.1-.8.3-1.1Z"/><path fill="#4285f4" d="m14.2 12 3.1-2.7 3.2 1.8c1 .6 1 1.3 0 1.8l-3.2 1.8-3.1-2.7Z"/><path fill="#fbbc04" d="m3.3 2.6 10.9 9.4 3.1-2.7-11-6.2c-1.1-.6-2.2-.7-3-.5Z"/><path fill="#ea4335" d="m3.3 21.4 10.9-9.4 3.1 2.7-11 6.2c-1.1.6-2.2.7-3 .5Z"/></svg>';
+  const appleIcon = '<svg class="app-detail-store-icon app-detail-apple-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 12.8c0-2 1.6-3 1.7-3.1a3.7 3.7 0 0 0-2.9-1.6c-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7a3.9 3.9 0 0 0-3.3 2c-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.4 2 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.3-2a8 8 0 0 0 1-2.1 3.4 3.4 0 0 1-1.8-3.2ZM14.7 6.8A3.7 3.7 0 0 0 15.6 4a3.8 3.8 0 0 0-2.5 1.3 3.5 3.5 0 0 0-.9 2.7 3.2 3.2 0 0 0 2.5-1.2Z"/></svg>';
+  const renderButton = (url, label, icon, secondary) => {
+    const classes = `app-detail-store-link${secondary ? " app-detail-store-link-secondary" : ""}`;
+    const content = `${icon}<span>${label}</span>`;
+    return url
+      ? `<a class="${classes}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${content}</a>`
+      : `<span class="${classes} app-detail-store-link-disabled" aria-disabled="true">${content}</span>`;
+  };
   const links = [
-    playStore && `<a class="app-detail-store-link" href="${escapeHtml(playStore)}" target="_blank" rel="noopener noreferrer"><svg class="app-detail-store-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.3 2.6 14.2 12 3.3 21.4c-.2-.3-.3-.7-.3-1.1V3.7c0-.4.1-.8.3-1.1Z"/><path fill="#4285f4" d="m14.2 12 3.1-2.7 3.2 1.8c1 .6 1 1.3 0 1.8l-3.2 1.8-3.1-2.7Z"/><path fill="#fbbc04" d="m3.3 2.6 10.9 9.4 3.1-2.7-11-6.2c-1.1-.6-2.2-.7-3-.5Z"/><path fill="#ea4335" d="m3.3 21.4 10.9-9.4 3.1 2.7-11 6.2c-1.1.6-2.2.7-3 .5Z"/></svg><span>Google Play</span></a>`,
-    appStore && `<a class="app-detail-store-link app-detail-store-link-secondary" href="${escapeHtml(appStore)}" target="_blank" rel="noopener noreferrer"><svg class="app-detail-store-icon app-detail-apple-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 12.8c0-2 1.6-3 1.7-3.1a3.7 3.7 0 0 0-2.9-1.6c-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7a3.9 3.9 0 0 0-3.3 2c-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.4 2 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.3-2a8 8 0 0 0 1-2.1 3.4 3.4 0 0 1-1.8-3.2ZM14.7 6.8A3.7 3.7 0 0 0 15.6 4a3.8 3.8 0 0 0-2.5 1.3 3.5 3.5 0 0 0-.9 2.7 3.2 3.2 0 0 0 2.5-1.2Z"/></svg><span>App Store</span></a>`,
-  ].filter(Boolean).join("\n");
+    renderButton(playStore, "Google Play", playIcon, false),
+    renderButton(appStore, "App Store", appleIcon, true),
+  ].join("\n");
   return `<section class="app-detail-section" aria-label="Download ${escapeHtml(app.title)}"><div class="app-detail-store-links">${links}</div></section>`;
 }
 
@@ -693,6 +770,9 @@ try {
   const categories = loadCategories();
   const shell = getIndexShell();
   const totalApps = categories.reduce((count, category) => count + category.apps.length, 0);
+  if (!IS_GAME) {
+    updateAppsListingScript();
+  }
   updateHomePage();
   updatePolicyAdSlots();
   const written = writePages(categories, shell);
