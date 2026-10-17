@@ -1,5 +1,11 @@
 // menu button features
 
+const searchQuery = new URLSearchParams(window.location.search).get("q");
+if (searchQuery) {
+  document.querySelectorAll('input[name="q"]').forEach((input) => {
+    input.value = searchQuery;
+  });
+}
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navbar = document.querySelector(".navbar-wrapper");

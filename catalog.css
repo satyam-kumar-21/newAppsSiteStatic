@@ -14,7 +14,7 @@ body {
   width: min(100%, 1120px);
   margin: 34px auto 60px;
   color: #1f2937;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
 }
 
 .catalog-intro {

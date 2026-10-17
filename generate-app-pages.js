@@ -3,6 +3,7 @@ const path = require("node:path");
 
 const ROOT = __dirname;
 const INDEX_FILE = path.join(ROOT, "index.html");
+const SEARCH_INDEX_FILE = path.join(ROOT, "search-index.js");
 const SITE_URL = (process.env.SITE_URL || "https://brandname.com").replace(/\/+$/, "");
 const CATALOG_TYPE = process.argv[2] || "apps";
 const IS_GAME = CATALOG_TYPE === "games";
@@ -150,6 +151,46 @@ function loadHomeCategories(type) {
   });
 }
 
+function writeSearchIndex() {
+  const catalog = ["apps", "games"].flatMap((type) => {
+    const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data", `${type}.json`), "utf8"));
+    const subcategories = data?.[type]?.subcategories;
+    if (!subcategories || typeof subcategories !== "object" || Array.isArray(subcategories)) {
+      throw new Error(`Expected data/${type}.json to contain ${type}.subcategories.`);
+    }
+    const labels = type === "apps" ? CATEGORY_LABELS : { action: "Action", racing: "Racing" };
+    return Object.entries(subcategories).flatMap(([key, category]) => {
+      if (!category || !Array.isArray(category.apps)) {
+        throw new Error(`Category "${key}" in data/${type}.json must contain an apps array.`);
+      }
+      const slug = category.slug || key;
+      const categoryName = category.name || labels[slug] || slug.split("-").map((part) => part[0].toUpperCase() + part.slice(1)).join(" ");
+      return category.apps.map((item) => {
+        if (!item?.title || !item.appurl) {
+          throw new Error(`An item in category "${categoryName}" is missing its title or appurl.`);
+        }
+        const appUrl = safeLocalPath(item.appurl, `${item.title} URL`).replace(/\/+$/, "");
+        const routePrefix = type === "apps" ? "/app/" : "/game/";
+        if (!appUrl.startsWith(routePrefix) || appUrl.length <= routePrefix.length) {
+          throw new Error(`Expected ${item.title} to have a URL under ${routePrefix}.`);
+        }
+        return {
+          title: item.title,
+          ratings: item.ratings,
+          appurl: item.appurl,
+          icon: item.icon,
+          categoryName,
+          categorySlug: slug,
+          developer: item.developer,
+          type,
+        };
+      });
+    });
+  });
+  const json = JSON.stringify(catalog).replace(/</g, "\\u003c");
+  fs.writeFileSync(SEARCH_INDEX_FILE, `window.catalogSearchItems = ${json};\n`, "utf8");
+}
+
 function renderHomeCategory(category) {
   const categoryUrl = `/${category.type}.html?category=${encodeURIComponent(category.slug)}#category-${encodeURIComponent(category.slug)}`;
   const cards = category.apps.map((app) => {
@@ -226,6 +267,7 @@ ${HOME_SECTION_END}`;
     );
   }
   fs.writeFileSync(INDEX_FILE, updatedIndex, "utf8");
+  writeSearchIndex();
   console.log(`Updated index.html with ${apps.length} app categories and ${games.length} game categories.`);
 }
 
@@ -267,15 +309,21 @@ function renderAppCard(app) {
 function renderMetadata(app) {
   const rows = [
     ["Category", app.categoryName],
-    ["Latest version", app["latest-version"]],
-    ["Published", app["publish-date"]],
+    ["Latest Version", app["latest-version"]],
+    ["Publish Date", app["publish-date"]],
     ["Developer", app.developer],
     ["Security", app.security],
     ["Price", app.price],
-    ["Downloads", app.downloads],
-    ["Ratings", app.ratings ? `${app.ratings} out of 5` : ""],
   ].filter(([, value]) => value !== undefined && value !== null && String(value).trim());
-  return rows.map(([label, value]) => `<div class="app-detail-meta-row"><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("\n");
+  const icons = {
+    Category: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h5v6H3zM12 3h5v5h-5zM12 12h5v4h-5zM9 10l3-3"/></svg>',
+    "Latest Version": '<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="6" y="2.5" width="11" height="15" rx="1.5"/><path d="M3 5v10M9 15h5"/></svg>',
+    "Publish Date": '<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4.5" width="14" height="13" rx="1.5"/><path d="M6.5 2.5v4M13.5 2.5v4M3 8h14M10 11v4m0 0 2-2m-2 2-2-2"/></svg>',
+    Developer: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h5l1.5 2H17v9H3z"/><path d="M8 11h4m-2-2v4"/></svg>',
+    Security: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5 16 5v4.5c0 3.7-2.5 6.3-6 8-3.5-1.7-6-4.3-6-8V5z"/><path d="M10 3v14.5"/></svg>',
+    Price: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 7 6 3h8l3.5 4-7.5 10z"/><path d="M2.5 7h15M6 3l4 14 4-14M6 7l4-4 4 4"/></svg>',
+  };
+  return rows.map(([label, value]) => `<div class="app-detail-meta-row"><dt>${icons[label]}<span>${escapeHtml(label)}</span></dt><dd>${escapeHtml(value)}</dd></div>`).join("\n");
 }
 
 function renderScreenshots(app) {
@@ -286,7 +334,7 @@ function renderScreenshots(app) {
     const imagePath = safeLocalPath(screenshot, `${app.title} screenshot`);
     return `<figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(`${app.title} ${ITEM_LABEL} screenshot ${index + 1}`)}" loading="lazy" decoding="async" /></figure>`;
   }).join("\n");
-  return `<section class="app-detail-section" aria-labelledby="app-screenshots-title"><h2 id="app-screenshots-title">${escapeHtml(app.title)} screenshots</h2><div class="app-detail-screenshots">${screenshots}</div></section>`;
+  return `<section class="app-detail-section" aria-label="${escapeHtml(app.title)} screenshots"><div class="app-detail-screenshots">${screenshots}</div></section>`;
 }
 
 function renderStoreLinks(app) {
@@ -296,10 +344,10 @@ function renderStoreLinks(app) {
     return "";
   }
   const links = [
-    playStore && `<a class="app-detail-store-link" href="${escapeHtml(playStore)}" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>`,
-    appStore && `<a class="app-detail-store-link app-detail-store-link-secondary" href="${escapeHtml(appStore)}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>`,
+    playStore && `<a class="app-detail-store-link" href="${escapeHtml(playStore)}" target="_blank" rel="noopener noreferrer"><svg class="app-detail-store-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.3 2.6 14.2 12 3.3 21.4c-.2-.3-.3-.7-.3-1.1V3.7c0-.4.1-.8.3-1.1Z"/><path fill="#4285f4" d="m14.2 12 3.1-2.7 3.2 1.8c1 .6 1 1.3 0 1.8l-3.2 1.8-3.1-2.7Z"/><path fill="#fbbc04" d="m3.3 2.6 10.9 9.4 3.1-2.7-11-6.2c-1.1-.6-2.2-.7-3-.5Z"/><path fill="#ea4335" d="m3.3 21.4 10.9-9.4 3.1 2.7-11 6.2c-1.1.6-2.2.7-3 .5Z"/></svg><span>Google Play</span></a>`,
+    appStore && `<a class="app-detail-store-link app-detail-store-link-secondary" href="${escapeHtml(appStore)}" target="_blank" rel="noopener noreferrer"><svg class="app-detail-store-icon app-detail-apple-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 12.8c0-2 1.6-3 1.7-3.1a3.7 3.7 0 0 0-2.9-1.6c-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7a3.9 3.9 0 0 0-3.3 2c-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.4 2 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.3-2a8 8 0 0 0 1-2.1 3.4 3.4 0 0 1-1.8-3.2ZM14.7 6.8A3.7 3.7 0 0 0 15.6 4a3.8 3.8 0 0 0-2.5 1.3 3.5 3.5 0 0 0-.9 2.7 3.2 3.2 0 0 0 2.5-1.2Z"/></svg><span>App Store</span></a>`,
   ].filter(Boolean).join("\n");
-  return `<section class="app-detail-section" aria-labelledby="app-download-title"><h2 id="app-download-title">Download ${escapeHtml(app.title)}</h2><div class="app-detail-store-links">${links}</div></section>`;
+  return `<section class="app-detail-section" aria-label="Download ${escapeHtml(app.title)}"><div class="app-detail-store-links">${links}</div></section>`;
 }
 
 function renderSchema(app, relatedApps, description) {
@@ -422,13 +470,12 @@ ${shell.header}
       </header>
       ${adSlot("overview")}
 
-      <section class="app-detail-section" aria-labelledby="app-information-title">
-        <h2 id="app-information-title">${escapeHtml(app.title)} ${ITEM_LABEL} information</h2>
+      <section class="app-detail-section" aria-label="${escapeHtml(app.title)} ${ITEM_LABEL} information">
         <dl class="app-detail-meta">${renderMetadata(app)}</dl>
       </section>
       ${adSlot("information")}
 
-      ${descriptions ? `<section class="app-detail-section" aria-labelledby="app-about-title"><h2 id="app-about-title">About ${escapeHtml(app.title)}</h2>${descriptions}</section>${adSlot("about")}` : ""}
+      ${descriptions ? `<section class="app-detail-section" aria-label="About ${escapeHtml(app.title)}">${descriptions}</section>${adSlot("about")}` : ""}
       ${renderScreenshots(app)}
       ${hasScreenshots ? adSlot("screenshots") : ""}
       ${renderStoreLinks(app)}

@@ -457,9 +457,21 @@ const pageDescription = document.querySelector("#apps-page-description");
 const metaDescription = document.querySelector('meta[name="description"]');
 
 if (categoryList && pageTitle && pageDescription) {
-  const requestedSlug = new URLSearchParams(window.location.search).get("category");
+  const parameters = new URLSearchParams(window.location.search);
+  const requestedSlug = parameters.get("category");
+  const searchQuery = parameters.get("q")?.trim() || "";
+  const normalizedQuery = searchQuery.toLocaleLowerCase();
+  const searchResults = searchQuery
+    ? (window.catalogSearchItems || []).filter((app) =>
+        [app.title, app.categoryName, app.developer, app.type]
+          .filter(Boolean)
+          .some((value) => value.toLocaleLowerCase().includes(normalizedQuery)),
+      )
+    : [];
   const selectedCategory = appCategories.find((category) => category.slug === requestedSlug);
-  const categoriesToShow = selectedCategory ? [selectedCategory] : appCategories;
+  const categoriesToShow = searchQuery
+    ? [{ name: `Search results for ${searchQuery}`, apps: searchResults }]
+    : selectedCategory ? [selectedCategory] : appCategories;
   const appPageUrl = new URL("apps.html", window.location.href);
 
   function getAppPageUrl(app) {
@@ -486,10 +498,11 @@ if (categoryList && pageTitle && pageDescription) {
   }
 
   function createAppCard(app, category) {
+    const appCategoryName = app.categoryName || category.name;
     const card = document.createElement("a");
     card.className = "app-card";
     card.href = getAppPageUrl(app);
-    card.setAttribute("aria-label", `${app.title}, ${category.name}, rated ${app.ratings} out of 5`);
+    card.setAttribute("aria-label", `${app.title}, ${appCategoryName}, rated ${app.ratings} out of 5`);
 
     const icon = document.createElement("span");
     icon.className = "app-card-icon";
@@ -520,9 +533,9 @@ if (categoryList && pageTitle && pageDescription) {
     title.className = "app-card-title";
     title.textContent = app.title;
 
-    const categoryName = document.createElement("span");
-    categoryName.className = "app-card-category";
-    categoryName.textContent = category.name;
+    const categoryLabel = document.createElement("span");
+    categoryLabel.className = "app-card-category";
+    categoryLabel.textContent = appCategoryName;
 
     const rating = document.createElement("span");
     rating.className = "app-card-rating";
@@ -537,7 +550,7 @@ if (categoryList && pageTitle && pageDescription) {
     ratingValue.textContent = app.ratings.toFixed(1);
 
     rating.append(star, ratingValue);
-    copy.append(title, categoryName, rating);
+    copy.append(title, categoryLabel, rating);
     card.append(icon, copy);
     return card;
   }
@@ -614,7 +627,48 @@ if (categoryList && pageTitle && pageDescription) {
     document.head.append(script);
   }
 
-  if (requestedSlug && !selectedCategory) {
+  if (searchQuery) {
+    const resultCount = searchResults.length;
+    pageTitle.textContent = `Search results for "${searchQuery}"`;
+    pageDescription.textContent = resultCount
+      ? `Found ${resultCount} matching ${resultCount === 1 ? "app or game" : "apps and games"}.`
+      : `No apps or games matched "${searchQuery}". Try another search.`;
+    document.title = `Search results for ${searchQuery} | BRANDNAME`;
+    if (metaDescription) {
+      metaDescription.content = pageDescription.textContent;
+    }
+
+    const section = document.createElement("section");
+    section.className = "apps-category";
+    section.id = "search-results";
+    section.setAttribute("aria-labelledby", "search-results-heading");
+
+    const heading = document.createElement("div");
+    heading.className = "apps-category-heading";
+    const title = document.createElement("h2");
+    title.id = "search-results-heading";
+    title.textContent = resultCount ? `${resultCount} results` : "No results";
+    heading.append(title);
+    section.append(heading);
+
+    if (resultCount) {
+      const grid = document.createElement("div");
+      grid.className = "apps-grid";
+      grid.setAttribute("role", "list");
+      searchResults.forEach((app) => {
+        const card = createAppCard(app, { name: app.categoryName });
+        card.setAttribute("role", "listitem");
+        grid.append(card);
+      });
+      section.append(grid);
+    } else {
+      const emptyMessage = document.createElement("p");
+      emptyMessage.className = "apps-message";
+      emptyMessage.textContent = "Check the spelling or try a different app, game, or category name.";
+      section.append(emptyMessage);
+    }
+    categoryList.append(section, createAdSlot("search-results"));
+  } else if (requestedSlug && !selectedCategory) {
     pageTitle.textContent = "App category not found";
     pageDescription.textContent = "The requested app category is unavailable. Browse all app categories below.";
     document.title = "App Category Not Found | BRANDNAME";

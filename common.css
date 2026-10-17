@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
 /* Shared page gutters */
 :root {
   --page-gutter: 15vw;
+  --font-family: "Manrope", "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
 }
 
 .main {
@@ -17,7 +24,7 @@
   box-shadow: 0 2px 6px rgba(31, 41, 55, 0.12);
   width: calc(100% + var(--page-gutter) + var(--page-gutter));
   margin-left: calc(0px - var(--page-gutter));
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
 }
 
 /* Navbar Flex Layout */
@@ -178,7 +185,7 @@ footer {
   padding: 24px var(--page-gutter);
   background-color: #f9fafb;
   color: #4b5563;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
 }
 
 .footer-content {
@@ -226,7 +233,7 @@ footer {
   max-width: 760px;
   margin: 48px 0;
   color: #374151;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
   line-height: 1.6;
 }
 
