@@ -96,6 +96,7 @@
 }
 
 .ad-slot {
+  /* display: flex;   for display */
   display: flex;
   min-height: 112px;
   align-items: center;
@@ -567,6 +568,61 @@
   display: none;
 }
 
+.app-detail-screenshot-carousel {
+  position: relative;
+}
+
+.app-detail-screenshot-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #667085;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(16, 24, 40, 0.18);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.app-detail-screenshot-arrow:hover {
+  color: #168767;
+  box-shadow: 0 6px 22px rgba(16, 24, 40, 0.24);
+}
+
+.app-detail-screenshot-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.app-detail-screenshot-arrow:focus-visible {
+  outline: 3px solid rgba(22, 135, 103, 0.35);
+  outline-offset: 3px;
+}
+
+.app-detail-screenshot-arrow svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.app-detail-screenshot-arrow-prev {
+  left: -18px;
+}
+
+.app-detail-screenshot-arrow-next {
+  right: -18px;
+}
+
 .app-detail-screenshots figure {
   flex: 0 0 auto;
   max-width: min(70vw, 420px);
@@ -848,6 +904,19 @@
   .app-detail-store-link {
     flex-basis: 100%;
     min-height: 70px;
+  }
+
+  .app-detail-screenshot-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .app-detail-screenshot-arrow-prev {
+    left: -10px;
+  }
+
+  .app-detail-screenshot-arrow-next {
+    right: -10px;
   }
 
   .app-detail-meta-row {

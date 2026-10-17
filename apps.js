@@ -10,10 +10,10 @@ const appCategories = [
         "icon": "/assets/images/apps/TikTok-Pro/icon.png"
       },
       {
-        "title": "Discord",
-        "ratings": 4.4,
-        "appurl": "/app/discord/",
-        "icon": "/assets/images/apps/discord/icon.webp"
+        "title": "PineDrama - Short Dramas",
+        "ratings": 4.6,
+        "appurl": "/app/com.ss.android.ttmd.video/",
+        "icon": "/assets/images/apps/PineDrama/icon.png"
       },
       {
         "title": "Instagram",

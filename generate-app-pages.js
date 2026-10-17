@@ -536,11 +536,22 @@ function renderScreenshots(app) {
   if (!Array.isArray(app.screenshots) || app.screenshots.length === 0) {
     return "";
   }
+  const galleryId = `screenshots-${slugify(app.pagePath)}`;
   const screenshots = app.screenshots.map((screenshot, index) => {
     const imagePath = safeLocalPath(screenshot, `${app.title} screenshot`);
     return `<figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(`${app.title} ${ITEM_LABEL} screenshot ${index + 1}`)}" loading="lazy" decoding="async" /></figure>`;
   }).join("\n");
-  return `<section class="app-detail-section" aria-label="${escapeHtml(app.title)} screenshots"><div class="app-detail-screenshots">${screenshots}</div></section>`;
+  return `<section class="app-detail-section app-detail-screenshot-section" aria-label="${escapeHtml(app.title)} screenshots">
+    <div class="app-detail-screenshot-carousel">
+      <button class="app-detail-screenshot-arrow app-detail-screenshot-arrow-prev" type="button" aria-label="Previous ${ITEM_LABEL} screenshots" aria-controls="${escapeHtml(galleryId)}" data-screenshot-direction="-1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+      </button>
+      <div class="app-detail-screenshots" id="${escapeHtml(galleryId)}">${screenshots}</div>
+      <button class="app-detail-screenshot-arrow app-detail-screenshot-arrow-next" type="button" aria-label="Next ${ITEM_LABEL} screenshots" aria-controls="${escapeHtml(galleryId)}" data-screenshot-direction="1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+      </button>
+    </div>
+  </section>`;
 }
 
 function renderStoreLinks(app) {

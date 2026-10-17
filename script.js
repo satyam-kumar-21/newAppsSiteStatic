@@ -12,6 +12,23 @@ const navbar = document.querySelector(".navbar-wrapper");
 const closeButton = document.querySelector(".menu-close");
 const backdrop = document.querySelector(".menu-backdrop");
 
+document.querySelectorAll(".app-detail-screenshot-carousel").forEach((carousel) => {
+  const gallery = carousel.querySelector(".app-detail-screenshots");
+  if (!gallery) {
+    return;
+  }
+
+  carousel.querySelectorAll("[data-screenshot-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = Number(button.dataset.screenshotDirection);
+      const firstScreenshot = gallery.querySelector("figure");
+      const gap = Number.parseFloat(getComputedStyle(gallery).columnGap) || 0;
+      const distance = firstScreenshot ? firstScreenshot.getBoundingClientRect().width + gap : gallery.clientWidth;
+      gallery.scrollBy({ left: direction * distance, behavior: "smooth" });
+    });
+  });
+});
+
 if (menuToggle && navbar) {
   const setMenuOpen = (isOpen) => {
     navbar.classList.toggle("is-menu-open", isOpen);
