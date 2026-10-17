@@ -38,6 +38,141 @@ function escapeHtml(value) {
   })[character]);
 }
 
+function escapeHtmlText(value) {
+  return String(value ?? "")
+    .replace(/&(?!(?:#\d+|#x[\da-f]+|[a-z][\da-z]+);)/gi, "&amp;")
+    .replace(/[<>"]/g, (character) => ({ "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character]);
+}
+
+const ALLOWED_CONTENT_TAGS = new Set([
+  "a", "b", "blockquote", "br", "caption", "code", "dd", "del", "div", "dl", "dt", "em",
+  "figcaption", "figure", "h1", "h2", "h3", "h4", "h5", "h6", "hr", "i", "img", "ins",
+  "kbd", "li", "ol", "p", "pre", "s", "small", "span", "strong", "sub", "sup", "table",
+  "tbody", "td", "tfoot", "th", "thead", "tr", "u", "ul",
+]);
+const VOID_CONTENT_TAGS = new Set(["br", "hr", "img"]);
+const DROP_CONTENT_TAGS = new Set(["iframe", "noembed", "noframes", "object", "script", "style", "svg", "template"]);
+
+function sanitizeContentAttributes(tagName, source) {
+  const attributes = [];
+  const attributePattern = /([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g;
+  let match;
+  while ((match = attributePattern.exec(source))) {
+    const name = match[1].toLowerCase();
+    const value = match[2] ?? match[3] ?? match[4] ?? "";
+    if (name.startsWith("on") || name === "style" || name === "srcdoc") {
+      continue;
+    }
+
+    if (tagName === "a" && name === "href") {
+      const safeHref = safeContentUrl(value, true);
+      if (safeHref) {
+        attributes.push(`href="${escapeHtml(safeHref)}"`);
+      }
+    } else if (tagName === "img" && name === "src") {
+      const safeSrc = safeContentUrl(value, false);
+      if (safeSrc) {
+        attributes.push(`src="${escapeHtml(safeSrc)}"`);
+      }
+    } else if ((tagName === "a" || tagName === "img") && (name === "alt" || name === "title")) {
+      attributes.push(`${name}="${escapeHtml(value)}"`);
+    } else if (tagName === "img" && (name === "width" || name === "height") && /^\d{1,4}$/.test(value)) {
+      attributes.push(`${name}="${value}"`);
+    } else if (tagName === "a" && name === "target" && ["_blank", "_self"].includes(value.toLowerCase())) {
+      attributes.push(`target="${value.toLowerCase()}"`);
+    }
+  }
+
+  if (tagName === "a" && attributes.some((attribute) => attribute.startsWith('target="_blank"'))) {
+    attributes.push('rel="noopener noreferrer"');
+  }
+  return attributes.length ? ` ${attributes.join(" ")}` : "";
+}
+
+function safeContentUrl(value, allowMailto) {
+  const url = String(value).trim();
+  if (!url || /[\u0000-\u001f\u007f]/.test(url) || url.startsWith("//")) {
+    return "";
+  }
+  if (url.startsWith("/") || url.startsWith("#") || url.startsWith("?")) {
+    return url;
+  }
+  if (/^(?:https?):\/\//i.test(url) || (allowMailto && /^(?:mailto|tel):/i.test(url))) {
+    return url;
+  }
+  return "";
+}
+
+function renderContentHtml(value) {
+  const input = String(value ?? "");
+  const tokens = input.match(/<!--[\s\S]*?-->|<\/?[a-z][^>]*>|[^<]+|</gi) || [];
+  const output = [];
+  const skippedTags = [];
+
+  for (const token of tokens) {
+    if (token.startsWith("<!--")) {
+      continue;
+    }
+    if (skippedTags.length) {
+      const skippedTagPattern = new RegExp(`^<\\s*(/?)\\s*${skippedTags[skippedTags.length - 1]}\\b`, "i");
+      const skippedMatch = token.match(skippedTagPattern);
+      if (skippedMatch) {
+        if (skippedMatch[1]) {
+          skippedTags.pop();
+        } else if (!token.endsWith("/>")) {
+          skippedTags.push(skippedTags[skippedTags.length - 1]);
+        }
+      }
+      continue;
+    }
+
+    if (token === "<" || !token.startsWith("<")) {
+      output.push(escapeHtmlText(token));
+      continue;
+    }
+
+    const tagMatch = token.match(/^<\s*(\/?)\s*([a-z][\w-]*)\b([\s\S]*?)>$/i);
+    if (!tagMatch) {
+      output.push(escapeHtmlText(token));
+      continue;
+    }
+
+    const isClosing = Boolean(tagMatch[1]);
+    const tagName = tagMatch[2].toLowerCase();
+    const attributes = tagMatch[3];
+    if (DROP_CONTENT_TAGS.has(tagName)) {
+      if (!isClosing && !/\/\s*>$/.test(token)) {
+        skippedTags.push(tagName);
+      }
+      continue;
+    }
+    if (!ALLOWED_CONTENT_TAGS.has(tagName)) {
+      continue;
+    }
+    if (isClosing) {
+      if (!VOID_CONTENT_TAGS.has(tagName)) {
+        output.push(`</${tagName}>`);
+      }
+    } else {
+      output.push(`<${tagName}${sanitizeContentAttributes(tagName, attributes)}>`);
+    }
+  }
+  return output.join("");
+}
+
+function contentToPlainText(value) {
+  return String(value ?? "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function renderAdSlot(slotId, generatedAttribute = "") {
   const safeId = slotId.toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/^-+|-+$/g, "");
   return `<aside class="ad-slot" id="ad-slot-${safeId}" aria-label="Advertisement"${generatedAttribute}><div><span class="ad-slot-label">Advertisement</span><span class="ad-slot-copy">Ad placement reserved</span></div></aside>`;
@@ -405,13 +540,16 @@ function renderPage(app, category, allApps, shell) {
     .sort((left, right) => (Number(right.ratings) || 0) - (Number(left.ratings) || 0))
     .slice(0, 10);
   const title = `${app.title} - Download, Ratings & Details`;
-  const description = [app.description1, app.description2].filter(Boolean).join(" ");
+  const description = [app.description1, app.description2]
+    .filter(Boolean)
+    .map((text) => contentToPlainText(renderContentHtml(text)))
+    .join(" ");
   const summary = description || `Explore ${app.title}, a ${app.categoryName.toLowerCase()} ${ITEM_LABEL} by ${app.developer || "its developer"}. See ${ITEM_LABEL} details, ratings, screenshots, and download links.`;
   const canonicalUrl = absoluteUrl(app.pagePath);
   const iconUrl = app.icon ? absoluteUrl(app.icon) : "";
   const imageMetadata = iconUrl ? `<meta property="og:image" content="${escapeHtml(iconUrl)}" /><meta name="twitter:image" content="${escapeHtml(iconUrl)}" />` : "";
   const descriptions = [app.description1, app.description2].filter(Boolean)
-    .map((text) => `<p>${escapeHtml(text)}</p>`)
+    .map((text) => `<div class="app-detail-rich-content">${renderContentHtml(text)}</div>`)
     .join("\n");
   const ratingCount = Number(app["ratings-counts"]) || 0;
   const heroIcon = app.icon
