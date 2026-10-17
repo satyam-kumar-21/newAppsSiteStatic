@@ -1,0 +1,261 @@
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-gutter: 6vw;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 5vw;
+  }
+
+  .navbar-wrapper {
+    position: relative;
+    padding: 12px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    order: 2;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    width: min(82vw, 320px);
+    padding: 20px 24px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background-color: #ffffff;
+    box-shadow: -4px 0 18px rgba(31, 41, 55, 0.16);
+  }
+
+  .navbar-wrapper.is-menu-open .nav-menu {
+    transform: translateX(0);
+  }
+
+  .menu-close {
+    display: block;
+    align-self: flex-end;
+    padding: 4px;
+    margin: 0 -4px 12px 0;
+  }
+
+  .menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 19;
+    border: 0;
+    background: rgba(15, 23, 42, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .navbar-wrapper.is-menu-open .menu-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
+    padding: 12px 0;
+  }
+
+  .drawer-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 36px;
+  }
+
+  .drawer-footer a {
+    color: #374151;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .drawer-footer .drawer-brand {
+    margin-bottom: 4px;
+    color: #1f2937;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .drawer-brand span {
+    color: #20c997;
+  }
+
+  .drawer-footer p {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 700px) {
+  .home-hero {
+    min-height: 320px;
+    padding: 36px var(--page-gutter);
+    background-image:
+      linear-gradient(90deg, rgba(18, 133, 197, 0.97) 0%, rgba(47, 86, 199, 0.92) 68%, rgba(59, 32, 143, 0.62) 100%),
+      url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80");
+    background-position: center, 68% center;
+  }
+
+  .home-hero-content {
+    width: min(100%, 520px);
+  }
+
+  .home-hero-mascot {
+    right: 0;
+    bottom: -8px;
+    width: min(42%, 260px);
+    height: 72%;
+    opacity: 0.72;
+  }
+
+  .home-hero-content {
+    z-index: 1;
+  }
+
+  .home-hero h1 {
+    max-width: 460px;
+    font-size: clamp(28px, 7.2vw, 36px);
+  }
+
+  .home-hero-copy {
+    max-width: 420px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-hero {
+    min-height: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .home-hero-mascot {
+    display: none;
+  }
+
+  .home-hero-search {
+    gap: 8px;
+    padding-left: 12px;
+  }
+
+  .home-hero-search button {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-search button {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 54px 0 40px;
+  }
+
+  .about-section {
+    padding: 40px 0;
+  }
+
+  .about-platform-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .about-platform-card {
+    min-height: 0;
+    padding: 19px;
+  }
+
+  .about-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .about-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding-top: 38px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+
+  .about-lead {
+    font-size: 15px;
+  }
+
+  .about-platform-list {
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .about-platform-list span {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .about-cta {
+    padding: 21px;
+  }
+
+  .legal-hero {
+    padding-bottom: 26px;
+  }
+
+  .legal-section {
+    padding: 20px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-primary-link {
+    transition: none;
+  }
+}
