@@ -286,13 +286,8 @@ if (categoryList && pageTitle && pageDescription) {
       robotsMeta.content = "noindex, follow";
     }
   }
-  const normalizedQuery = searchQuery.toLocaleLowerCase();
   const searchResults = searchQuery
-    ? (window.catalogSearchItems || []).filter((app) =>
-        [app.title, app.categoryName, app.developer, app.type]
-          .filter(Boolean)
-          .some((value) => value.toLocaleLowerCase().includes(normalizedQuery)),
-      )
+    ? window.searchCatalogItems?.(searchQuery) || []
     : [];
   const selectedCategory = appCategories.find((category) => category.slug === requestedSlug);
   const categoriesToShow = searchQuery

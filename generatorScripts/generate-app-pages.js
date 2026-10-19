@@ -405,6 +405,10 @@ function writeSearchIndex() {
           categoryName,
           categorySlug: slug,
           developer: item.developer,
+          description: [item.description1, item.description2]
+            .filter(Boolean)
+            .map((text) => contentToPlainText(renderContentHtml(text)))
+            .join(" "),
           type,
         };
       });
@@ -464,6 +468,15 @@ function renderListingCategories(type) {
   return loadHomeCategories(type).map(renderHomeCategory).join("\n");
 }
 
+function ensureSearchIndexScript(html) {
+  const searchIndexScript = '<script src="/scripts/search-index.js" defer></script>';
+  html = html.replace(/(?:\s*<script src="\/scripts\/search-index\.js" defer><\/script>)+/g, "");
+  return html.replace(
+    /(<script src="\/scripts\/script\.js" defer><\/script>)/,
+    `${searchIndexScript}\n$1`,
+  );
+}
+
 function updateListingPage(type) {
   const filePath = path.join(ROOT, type, "index.html");
   let html = fs.readFileSync(filePath, "utf8");
@@ -496,16 +509,11 @@ function updateListingPage(type) {
     }
     html = `${html.slice(0, openEnd + 1)}\n${listingMarkup}\n${html.slice(closeIndex)}`;
   }
-  if (!html.includes('src="/scripts/search-index.js"')) {
-    html = html.replace(
-      /<script src="\/scripts\/(apps|games)\.js" defer><\/script>/,
-      '<script src="/scripts/search-index.js" defer></script>\n  <script src="/scripts/$1.js" defer></script>',
-    );
-  }
   html = html
     .replace(/(href|action)="([^"]+)"/g, (_match, attribute, value) => `${attribute}="${publicPath(value)}"`)
     .replace(/(href|src)="\/?(style|common|responsive|apps|about|catalog)\.css"/g, '$1="/styles/$2.css"')
     .replace(/src="\/?(script|search-index|apps|games)\.js"/g, 'src="/scripts/$1.js"');
+  html = ensureSearchIndexScript(html);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, html, "utf8");
 }
@@ -964,6 +972,7 @@ ${shell.header}
 </main>
 ${shell.footer}
 </section>
+<script src="/scripts/search-index.js" defer></script>
 <script src="/scripts/script.js" defer></script>
 </body>
 </html>`;
@@ -1170,8 +1179,10 @@ function updateInternalPageLinks() {
       };
       html = html
         .replace(/(href|action)="([^"]+)"/g, (_match, attribute, value) => `${attribute}="${normalizeLink(value)}"`)
+        .replace(/(<form\b[^>]*\baction=")\/apps(")/gi, "$1/apps/$2")
         .replace(/(href|src)="\/?(style|common|responsive|apps|about|catalog)\.css"/g, '$1="/styles/$2.css"')
         .replace(/src="\/?(script|search-index|apps|games)\.js"/g, 'src="/scripts/$1.js"');
+      html = ensureSearchIndexScript(html);
       fs.writeFileSync(filePath, html, "utf8");
     }
   };

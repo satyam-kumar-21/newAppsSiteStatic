@@ -1,3 +1,8 @@
+// Want to change domain and brand name run this command in root directory of the project:
+
+// node generatorScripts/set-site-brand.js --name "BRAND NAME" --domain domain.com       
+
+
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({
     "&": "&amp;",
