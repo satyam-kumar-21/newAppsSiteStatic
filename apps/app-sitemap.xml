@@ -14,9 +14,11 @@
   <url><loc>https://domain.com/app/com.google.android.apps.youtube.unplugged</loc></url>
   <url><loc>https://domain.com/app/com.amazon.avod.thirdpartyclient</loc></url>
   <url><loc>https://domain.com/app/com.disney.disneyplus</loc></url>
+  <url><loc>https://domain.com/app/tv.pluto.android</loc></url>
+  <url><loc>https://domain.com/app/com.peacocktv.peacockandroid</loc></url>
+  <url><loc>https://domain.com/app/com.cbs.app</loc></url>
+  <url><loc>https://domain.com/app/com.roku.remote</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
-  <url><loc>https://domain.com/app/test2</loc></url>
-  <url><loc>https://domain.com/app/test3</loc></url>
   <url><loc>https://domain.com/app/tiktok</loc></url>
   <url><loc>https://domain.com/app/capcut</loc></url>
   <url><loc>https://domain.com/app/lightroom</loc></url>

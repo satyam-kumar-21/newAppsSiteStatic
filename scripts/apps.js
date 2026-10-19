@@ -82,22 +82,34 @@ const appCategories = [
         "icon": "/assets/images/apps/disney-plus/icon.png"
       },
       {
+        "title": "Pluto TV: Watch Free Movies/TV",
+        "ratings": 3.7,
+        "appurl": "/app/tv.pluto.android",
+        "icon": "/assets/images/apps/pluto-tv/icon.png"
+      },
+      {
+        "title": "Peacock TV: Stream TV & Movies",
+        "ratings": 4.6,
+        "appurl": "/app/com.peacocktv.peacockandroid",
+        "icon": "/assets/images/apps/peacock-tv/icon.png"
+      },
+      {
+        "title": "Paramount+",
+        "ratings": 4.1,
+        "appurl": "/app/com.cbs.app",
+        "icon": "/assets/images/apps/paramount-plus/icon.png"
+      },
+      {
+        "title": "Roku Remote (Official)",
+        "ratings": 4.7,
+        "appurl": "/app/com.roku.remote",
+        "icon": "/assets/images/apps/roku-remote/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.3,
         "appurl": "/app/test",
         "icon": "/assets/images/apps/test/icon.webp"
-      },
-      {
-        "title": "Test2",
-        "ratings": 4.3,
-        "appurl": "/app/test2",
-        "icon": "/assets/images/apps/test2/icon.webp"
-      },
-      {
-        "title": "Test3",
-        "ratings": 4.3,
-        "appurl": "/app/test3",
-        "icon": "/assets/images/apps/test3/icon.webp"
       }
     ]
   },
