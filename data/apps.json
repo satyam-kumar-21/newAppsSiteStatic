@@ -527,7 +527,7 @@
             ]
           },
           {
-            "appurl": "/app/test/",
+            "appurl": "/app/test1/",
             "title": "Test",
             "icon": "/assets/images/apps/test/icon.webp",
             "ratings": 4.3,

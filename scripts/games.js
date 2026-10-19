@@ -401,7 +401,7 @@ if (categoryList && pageTitle && pageDescription) {
     if (!showAll) {
       const viewAll = document.createElement("a");
       viewAll.className = "apps-view-all";
-      viewAll.href = `/games/?category=${encodeURIComponent(category.slug)}`;
+      viewAll.href = `/games/${encodeURIComponent(category.slug)}/`;
       viewAll.setAttribute("aria-label", `View all ${category.name} games`);
       viewAll.title = `View all ${category.name} games`;
 

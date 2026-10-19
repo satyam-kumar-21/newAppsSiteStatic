@@ -1,7 +1,7 @@
 const appCategories = [
   {
     "name": "Entertainment",
-    "slug": "Entertainment",
+    "slug": "entertainment",
     "apps": [
       {
         "title": "TikTok Pro - Events",
@@ -109,6 +109,12 @@ const appCategories = [
         "title": "Test",
         "ratings": 4.3,
         "appurl": "/app/test",
+        "icon": "/assets/images/apps/test/icon.webp"
+      },
+      {
+        "title": "Test",
+        "ratings": 4.3,
+        "appurl": "/app/test1",
         "icon": "/assets/images/apps/test/icon.webp"
       }
     ]
@@ -605,7 +611,7 @@ if (categoryList && pageTitle && pageDescription) {
     if (!showAll) {
       const viewAll = document.createElement("a");
       viewAll.className = "apps-view-all";
-      viewAll.href = `/apps/?category=${encodeURIComponent(category.slug)}`;
+      viewAll.href = `/apps/${encodeURIComponent(category.slug)}/`;
       viewAll.setAttribute("aria-label", `View all ${category.name} apps`);
       viewAll.title = `View all ${category.name} apps`;
 
