@@ -648,7 +648,7 @@ if (categoryList && pageTitle && pageDescription) {
     pageDescription.textContent = resultCount
       ? `Found ${resultCount} matching ${resultCount === 1 ? "app or game" : "apps and games"}.`
       : `No apps or games matched "${searchQuery}". Try another search.`;
-    document.title = `Search results for ${searchQuery} | BRANDNAME`;
+    document.title = `Search results for ${searchQuery} | BRAND NAME`;
     if (metaDescription) {
       metaDescription.content = pageDescription.textContent;
     }
@@ -687,7 +687,7 @@ if (categoryList && pageTitle && pageDescription) {
     categoryList.replaceChildren();
     pageTitle.textContent = "App category not found";
     pageDescription.textContent = "The requested app category is unavailable. Browse all app categories below.";
-    document.title = "App Category Not Found | BRANDNAME";
+    document.title = "App Category Not Found | BRAND NAME";
     if (metaDescription) {
       metaDescription.content = pageDescription.textContent;
     }
@@ -698,7 +698,7 @@ if (categoryList && pageTitle && pageDescription) {
     categoryList.replaceChildren();
     pageTitle.textContent = `All ${selectedCategory.name} apps`;
     pageDescription.textContent = `Browse every ${selectedCategory.name.toLowerCase()} app in our catalog, with ratings and links to each app.`;
-    document.title = `All ${selectedCategory.name} Apps | BRANDNAME`;
+    document.title = `All ${selectedCategory.name} Apps | BRAND NAME`;
     if (metaDescription) {
       metaDescription.content = pageDescription.textContent;
     }

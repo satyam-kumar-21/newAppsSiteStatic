@@ -1,14 +1,20 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const { assetUrl } = require("./asset-urls");
+const { replaceBranding } = require("./brand-utils");
 
 const ROOT = path.resolve(__dirname, "..");
+const BRAND_CONFIG = JSON.parse(fs.readFileSync(path.join(__dirname, "site-brand.json"), "utf8"));
+if (typeof BRAND_CONFIG.brandName !== "string" || typeof BRAND_CONFIG.domain !== "string") {
+  throw new Error("generatorScripts/site-brand.json must define string values for brandName and domain.");
+}
+const BRAND_NAME = BRAND_CONFIG.brandName;
 const INDEX_FILE = path.join(ROOT, "index.html");
 const SITE_SITEMAP_FILE = path.join(ROOT, "site-sitemap.xml");
 const SITEMAP_INDEX_FILE = path.join(ROOT, "sitemap.xml");
 const ROBOTS_FILE = path.join(ROOT, "robots.txt");
 const SEARCH_INDEX_FILE = path.join(ROOT, "scripts", "search-index.js");
-const SITE_URL = (process.env.SITE_URL || "https://brandname.com").replace(/\/+$/, "");
+const SITE_URL = (process.env.SITE_URL || `https://${BRAND_CONFIG.domain}`).replace(/\/+$/, "");
 const CATALOG_TYPE = process.argv[2] || "apps";
 const IS_GAME = CATALOG_TYPE === "games";
 if (!["apps", "games"].includes(CATALOG_TYPE)) {
@@ -1088,6 +1094,29 @@ function writeRootSitemaps() {
   fs.writeFileSync(ROBOTS_FILE, robots, "utf8");
 }
 
+function applyConfiguredBranding() {
+  const updateDirectory = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const filePath = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        if (entry.name !== ".git" && entry.name !== "assets" && entry.name !== "data" && entry.name !== "generatorScripts") {
+          updateDirectory(filePath);
+        }
+        continue;
+      }
+      if (!entry.isFile() || ![".html", ".js"].includes(path.extname(entry.name).toLowerCase())) {
+        continue;
+      }
+      const original = fs.readFileSync(filePath, "utf8");
+      const updated = replaceBranding(original, "BRANDNAME", BRAND_NAME, filePath.endsWith(".html"));
+      if (updated !== original) {
+        fs.writeFileSync(filePath, updated, "utf8");
+      }
+    }
+  };
+  updateDirectory(ROOT);
+}
+
 function updateInternalPageLinks() {
   const categoryTypes = new Map();
   for (const type of ["apps", "games"]) {
@@ -1164,6 +1193,7 @@ try {
   updatePolicyAdSlots();
   const written = writePages(categories, shell);
   writeRootSitemaps();
+  applyConfiguredBranding();
   console.log(`Generated ${written} ${ITEM_LABEL} detail pages for ${totalApps} ${ITEMS_LABEL} across ${categories.length} categories in ${path.relative(ROOT, OUTPUT_DIR)}.`);
   console.log(`Canonical domain: ${SITE_URL}`);
   console.log("To use a different public domain, set SITE_URL before running this script.");
