@@ -40,22 +40,22 @@ const appCategories = [
         "icon": "/assets/images/apps/StoryReel/icon.png"
       },
       {
-        "title": "Pinterest",
-        "ratings": 4.6,
-        "appurl": "/app/pinterest",
-        "icon": "/assets/images/apps/pinterest/icon.webp"
+        "title": "ReelShort - Stream Drama & TV",
+        "ratings": 3.8,
+        "appurl": "/app/com.newleaf.app.android.victor",
+        "icon": "/assets/images/apps/ReelShort/icon.png"
       },
       {
-        "title": "Snapchat",
-        "ratings": 4.1,
-        "appurl": "/app/snapchat",
-        "icon": "/assets/images/apps/snapchat/icon.webp"
+        "title": "zeta: AI Chat, Story, Play",
+        "ratings": 4.5,
+        "appurl": "/app/com.scatterlab.messenger",
+        "icon": "/assets/images/apps/zeta/icon.png"
       },
       {
-        "title": "LinkedIn",
-        "ratings": 4.4,
-        "appurl": "/app/linkedin",
-        "icon": "/assets/images/apps/linkedin/icon.webp"
+        "title": "Netflix",
+        "ratings": 4.7,
+        "appurl": "/app/com.netflix.mediaclient",
+        "icon": "/assets/images/apps/netflix/icon.png"
       },
       {
         "title": "Tumblr",
