@@ -106,15 +106,27 @@ const appCategories = [
         "icon": "/assets/images/apps/roku-remote/icon.png"
       },
       {
-        "title": "Test",
-        "ratings": 4.3,
-        "appurl": "/app/test",
-        "icon": "/assets/images/apps/test/icon.webp"
+        "title": "VIZIO | WatchFree+",
+        "ratings": 4.2,
+        "appurl": "/app/com.vizio.vue.launcher",
+        "icon": "/assets/images/apps/vizio/icon.png"
+      },
+      {
+        "title": "VibeShort: AI Dramas & Reels",
+        "ratings": 4.5,
+        "appurl": "/app/com.vibeshort.visualnovel.android",
+        "icon": "/assets/images/apps/vibeshort/icon.png"
+      },
+      {
+        "title": "Crunchyroll: Anime Streaming",
+        "ratings": 4.6,
+        "appurl": "/app/com.crunchyroll.crunchyroid",
+        "icon": "/assets/images/apps/crunchyroll/icon.png"
       },
       {
         "title": "Test",
         "ratings": 4.3,
-        "appurl": "/app/test1",
+        "appurl": "/app/test",
         "icon": "/assets/images/apps/test/icon.webp"
       }
     ]
