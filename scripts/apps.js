@@ -10,10 +10,10 @@ const appCategories = [
         "icon": "/assets/images/apps/TikTok-Pro/icon.png"
       },
       {
-        "title": "PineDrama - Short Dramas",
-        "ratings": 4.6,
-        "appurl": "/app/com.ss.android.ttmd.video",
-        "icon": "/assets/images/apps/PineDrama/icon.png"
+        "title": "YouTube Kids",
+        "ratings": 4.2,
+        "appurl": "/app/com.google.android.apps.youtube.kids",
+        "icon": "/assets/images/apps/youtube-kids/icon.png"
       },
       {
         "title": "BlinkDrama: Short Dramas & TV",
@@ -58,34 +58,46 @@ const appCategories = [
         "icon": "/assets/images/apps/netflix/icon.png"
       },
       {
-        "title": "Tumblr",
-        "ratings": 4,
-        "appurl": "/app/tumblr",
-        "icon": "/assets/images/apps/tumblr/icon.webp"
+        "title": "PineDrama - Short Dramas",
+        "ratings": 4.6,
+        "appurl": "/app/com.ss.android.ttmd.video",
+        "icon": "/assets/images/apps/PineDrama/icon.png"
       },
       {
-        "title": "Mastodon",
-        "ratings": 4.2,
-        "appurl": "/app/mastodon",
-        "icon": "/assets/images/apps/mastodon/icon.webp"
+        "title": "YouTube TV: Live TV & more",
+        "ratings": 3.8,
+        "appurl": "/app/com.google.android.apps.youtube.unplugged",
+        "icon": "/assets/images/apps/youtube-tv/icon.png"
       },
       {
-        "title": "Bluesky Social",
-        "ratings": 4.5,
-        "appurl": "/app/bluesky",
-        "icon": "/assets/images/apps/bluesky/icon.webp"
+        "title": "Prime Video",
+        "ratings": 4.7,
+        "appurl": "/app/com.amazon.avod.thirdpartyclient",
+        "icon": "/assets/images/apps/prime-video/icon.png"
       },
       {
-        "title": "Quora",
-        "ratings": 4.1,
-        "appurl": "/app/quora",
-        "icon": "/assets/images/apps/quora/icon.webp"
-      },
-      {
-        "title": "Nextdoor",
+        "title": "Disney+",
         "ratings": 4.3,
-        "appurl": "/app/nextdoor",
-        "icon": "/assets/images/apps/nextdoor/icon.webp"
+        "appurl": "/app/com.disney.disneyplus",
+        "icon": "/assets/images/apps/disney-plus/icon.png"
+      },
+      {
+        "title": "Test",
+        "ratings": 4.3,
+        "appurl": "/app/test",
+        "icon": "/assets/images/apps/test/icon.webp"
+      },
+      {
+        "title": "Test2",
+        "ratings": 4.3,
+        "appurl": "/app/test2",
+        "icon": "/assets/images/apps/test2/icon.webp"
+      },
+      {
+        "title": "Test3",
+        "ratings": 4.3,
+        "appurl": "/app/test3",
+        "icon": "/assets/images/apps/test3/icon.webp"
       }
     ]
   },
@@ -581,7 +593,7 @@ if (categoryList && pageTitle && pageDescription) {
     if (!showAll) {
       const viewAll = document.createElement("a");
       viewAll.className = "apps-view-all";
-      viewAll.href = `/apps?category=${encodeURIComponent(category.slug)}`;
+      viewAll.href = `/apps/?category=${encodeURIComponent(category.slug)}`;
       viewAll.setAttribute("aria-label", `View all ${category.name} apps`);
       viewAll.title = `View all ${category.name} apps`;
 

@@ -442,7 +442,7 @@ function updateAppsListingScript() {
 }
 
 function renderHomeCategory(category) {
-  const categoryUrl = `/${category.type}?category=${encodeURIComponent(category.slug)}`;
+  const categoryUrl = `/${category.type}/?category=${encodeURIComponent(category.slug)}`;
   const cards = category.apps.map((app) => {
     const iconContent = app.icon
       ? `<img src="${escapeHtml(assetUrl(safeLocalPath(app.icon, `${app.title} icon`)))}" alt="" loading="lazy" width="56" height="56" />`
