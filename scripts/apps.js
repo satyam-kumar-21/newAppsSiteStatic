@@ -124,10 +124,106 @@ const appCategories = [
         "icon": "/assets/images/apps/crunchyroll/icon.png"
       },
       {
+        "title": "Apple TV: Shows, Movies & More",
+        "ratings": 4.1,
+        "appurl": "/app/com.apple.atve.androidtv.appletv",
+        "icon": "/assets/images/apps/apple-tv/icon.png"
+      },
+      {
+        "title": "Plex: Find Movies & TV Shows",
+        "ratings": 3.5,
+        "appurl": "/app/com.plexapp.android",
+        "icon": "/assets/images/apps/plex/icon.png"
+      },
+      {
+        "title": "Hulu: Stream TV shows & movies",
+        "ratings": 4.5,
+        "appurl": "/app/com.hulu.plus",
+        "icon": "/assets/images/apps/hulu/icon.png"
+      },
+      {
+        "title": "Google Play Games",
+        "ratings": 3.9,
+        "appurl": "/app/com.google.android.play.games",
+        "icon": "/assets/images/apps/google-play-games/icon.png"
+      },
+      {
+        "title": "YouTube for Android TV",
+        "ratings": 3.5,
+        "appurl": "/app/com.google.android.youtube.tv",
+        "icon": "/assets/images/apps/youtube-for-android-tv/icon.png"
+      },
+      {
+        "title": "IMDb: Movies & TV Shows",
+        "ratings": 4.3,
+        "appurl": "/app/com.imdb.mobile",
+        "icon": "/assets/images/apps/IMDb/icon.png"
+      },
+      {
+        "title": "JioTV: Live TV, OTT & Catch-up",
+        "ratings": 4,
+        "appurl": "/app/com.jio.jioplay.tv",
+        "icon": "/assets/images/apps/jivo-tv/icon.png"
+      },
+      {
+        "title": "Talking Tom & Ben News",
+        "ratings": 4.4,
+        "appurl": "/app/com.outfit7.talkingnewsfree",
+        "icon": "/assets/images/apps/talking-tom-ben-news/icon.png"
+      },
+      {
+        "title": "Samsung TV Plus - TV & Movies",
+        "ratings": 3.8,
+        "appurl": "/app/com.samsung.android.tvplus",
+        "icon": "/assets/images/apps/samsung-tv-plus/icon.png"
+      },
+      {
+        "title": "Sony LIV:Sports, Entertainment",
+        "ratings": 3.3,
+        "appurl": "/app/com.sonyliv",
+        "icon": "/assets/images/apps/sony-liv/icon.png"
+      },
+      {
+        "title": "Kuku TV: Short Dramas & Series",
+        "ratings": 4.2,
+        "appurl": "/app/com.vlv.aravali.reels",
+        "icon": "/assets/images/apps/kuku-tv/icon.png"
+      },
+      {
+        "title": "ShortMax - Short Dramas & TV",
+        "ratings": 4.4,
+        "appurl": "/app/live.shorttv.apps",
+        "icon": "/assets/images/apps/Short-Max/icon.png"
+      },
+      {
+        "title": "Dailymotion Social Video App",
+        "ratings": 3.8,
+        "appurl": "/app/com.dailymotion.dailymotion",
+        "icon": "/assets/images/apps/dailymotion/icon.png"
+      },
+      {
+        "title": "Colorfy: Coloring Book Games",
+        "ratings": 3.8,
+        "appurl": "/app/com.fungamesforfree.colorfy",
+        "icon": "/assets/images/apps/colorfy/icon.png"
+      },
+      {
+        "title": "RapidTV - Short Dramas",
+        "ratings": 4.2,
+        "appurl": "/app/com.rapid.short.tv",
+        "icon": "/assets/images/apps/rapid-tv/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.3,
         "appurl": "/app/test",
-        "icon": "/assets/images/apps/test/icon.webp"
+        "icon": "/assets/images/apps/test/icon.png"
+      },
+      {
+        "title": "Test..",
+        "ratings": 4.3,
+        "appurl": "/app/test1",
+        "icon": "/assets/images/apps/test/icon.png"
       }
     ]
   },

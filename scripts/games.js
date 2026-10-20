@@ -1,91 +1,73 @@
 const appCategories = [
   {
-    "name": "Action",
-    "slug": "action",
+    "name": "Entertainment",
+    "slug": "Entertainment",
     "apps": [
+      {
+        "title": "Free Fire x NARUTO SHIPPUDEN",
+        "ratings": 4.4,
+        "appurl": "/app/com.dts.freefireth",
+        "icon": "/assets/images/apps/free-fire/icon.png"
+      },
+      {
+        "title": "Temple Run 2",
+        "ratings": 4.1,
+        "appurl": "/app/com.imangi.templerun2",
+        "icon": "/assets/images/apps/temple-run/icon.png"
+      },
       {
         "title": "PUBG MOBILE",
         "ratings": 4.3,
-        "appurl": "/app/pubg-mobile",
-        "icon": "/assets/images/games/pubg-mobile/icon.webp"
+        "appurl": "/app/com.tencent.ig",
+        "icon": "/assets/images/apps/pubg-mobile/icon.png"
+      },
+      {
+        "title": "slither.io",
+        "ratings": 3.9,
+        "appurl": "/app/air.com.hyp",
+        "icon": "/assets/images/apps/slither-io/icon.png"
+      },
+      {
+        "title": "Free Fire MAX x NARUTO",
+        "ratings": 4.5,
+        "appurl": "/app/com.dts.freefiremax",
+        "icon": "/assets/images/apps/free-fire-max/icon.png"
+      },
+      {
+        "title": "Sniper 3D：Gun Shooting Games",
+        "ratings": 4.6,
+        "appurl": "/app/com.fungames.sniper3d",
+        "icon": "/assets/images/apps/sniper-3d/icon.png"
+      },
+      {
+        "title": "Among Us",
+        "ratings": 3.9,
+        "appurl": "/app/com.innersloth.spacemafia",
+        "icon": "/assets/images/apps/among-us/icon.jpg"
+      },
+      {
+        "title": "Mobile Legends: Bang Bang",
+        "ratings": 4.1,
+        "appurl": "/app/com.mobile.legends",
+        "icon": "/assets/images/apps/bang-bang/icon.png"
+      },
+      {
+        "title": "Kick the Buddy－Fun Action Game",
+        "ratings": 4.1,
+        "appurl": "/app/app/com.playgendary.kickthebuddy",
+        "icon": "/assets/images/apps/kick-the-buddy/icon.png"
       },
       {
         "title": "Brawl Stars",
-        "ratings": 4.3,
-        "appurl": "/app/brawl-stars",
-        "icon": "/assets/images/games/brawl-stars/icon.webp"
-      },
-      {
-        "title": "Call of Duty: Mobile",
-        "ratings": 4.4,
-        "appurl": "/app/call-of-duty-mobile",
-        "icon": "/assets/images/games/call-of-duty-mobile/icon.webp"
-      },
-      {
-        "title": "Free Fire",
-        "ratings": 4.1,
-        "appurl": "/app/free-fire",
-        "icon": "/assets/images/games/free-fire/icon.webp"
-      },
-      {
-        "title": "Shadow Fight 3",
-        "ratings": 4.5,
-        "appurl": "/app/shadow-fight-3",
-        "icon": "/assets/images/games/shadow-fight-3/icon.webp"
-      },
-      {
-        "title": "MORTAL KOMBAT",
         "ratings": 4.2,
-        "appurl": "/app/mortal-kombat",
-        "icon": "/assets/images/games/mortal-kombat/icon.webp"
+        "appurl": "/app/app/com.supercell.brawlstars",
+        "icon": "/assets/images/apps/brawl-stars/icon.png"
       },
       {
-        "title": "Genshin Impact",
-        "ratings": 4.3,
-        "appurl": "/app/genshin-impact",
-        "icon": "/assets/images/games/genshin-impact/icon.webp"
-      },
-      {
-        "title": "Dead Cells",
-        "ratings": 4.6,
-        "appurl": "/app/dead-cells",
-        "icon": "/assets/images/games/dead-cells/icon.webp"
-      },
-      {
-        "title": "Subway Surfers",
-        "ratings": 4.6,
-        "appurl": "/app/subway-surfers",
-        "icon": "/assets/images/games/subway-surfers/icon.webp"
-      },
-      {
-        "title": "Modern Combat 5",
+        "title": "Stacky Dash",
         "ratings": 4.2,
-        "appurl": "/app/modern-combat-5",
-        "icon": "/assets/images/games/modern-combat-5/icon.webp"
-      },
-      {
-        "title": "Into the Dead 2",
-        "ratings": 4.5,
-        "appurl": "/app/into-the-dead-2",
-        "icon": "/assets/images/games/into-the-dead-2/icon.webp"
-      },
-      {
-        "title": "Honkai: Star Rail",
-        "ratings": 4.5,
-        "appurl": "/app/honkai-star-rail",
-        "icon": "/assets/images/games/honkai-star-rail/icon.webp"
-      },
-      {
-        "title": "Ninja Arashi 2",
-        "ratings": 4.6,
-        "appurl": "/app/ninja-arashi-2",
-        "icon": "/assets/images/games/ninja-arashi-2/icon.webp"
-      },
-      {
-        "title": "Brawlhalla",
-        "ratings": 4.2,
-        "appurl": "/app/brawlhalla",
-        "icon": "/assets/images/games/brawlhalla/icon.webp"
+        "appurl": "/app/app/com.Born2Play.StackyDash",
+        "icon": "/assets/images/apps/stacky-dash/icon.png"
       }
     ]
   },
@@ -401,7 +383,7 @@ if (categoryList && pageTitle && pageDescription) {
     if (!showAll) {
       const viewAll = document.createElement("a");
       viewAll.className = "apps-view-all";
-      viewAll.href = `/games/${encodeURIComponent(category.slug)}/`;
+      viewAll.href = `/apps/${encodeURIComponent(category.slug)}/`;
       viewAll.setAttribute("aria-label", `View all ${category.name} games`);
       viewAll.title = `View all ${category.name} games`;
 
