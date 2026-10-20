@@ -238,9 +238,39 @@ const appCategories = [
         "icon": "/assets/images/apps/abpv-america/icon.png"
       },
       {
+        "title": "discovery+ | Stream TV Shows",
+        "ratings": 4.7,
+        "appurl": "/app/com.discovery.discoveryplus.mobile",
+        "icon": "/assets/images/apps/discovery-plus/icon.png"
+      },
+      {
+        "title": "Emochi: Chat With Character",
+        "ratings": 4.3,
+        "appurl": "/app/com.flow.mobile",
+        "icon": "/assets/images/apps/emochi/icon.png"
+      },
+      {
+        "title": "iDrama – Short Dramas & Reels",
+        "ratings": 4.7,
+        "appurl": "/app/com.gooddrama.idrama",
+        "icon": "/assets/images/apps/i-drama/icon.png"
+      },
+      {
+        "title": "JBL Portable",
+        "ratings": 4.7,
+        "appurl": "/app/JBL Portable",
+        "icon": "/assets/images/apps/jbl-portable/icon.png"
+      },
+      {
+        "title": "Hulu for Android TV",
+        "ratings": 2.5,
+        "appurl": "/app/com.hulu.livingroomplus",
+        "icon": "/assets/images/apps/hulu-for-android-tv/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.3,
-        "appurl": "/app/test",
+        "appurl": "/app/test1",
         "icon": "/assets/images/apps/test/icon.png"
       }
     ]
