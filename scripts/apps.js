@@ -214,15 +214,33 @@ const appCategories = [
         "icon": "/assets/images/apps/rapid-tv/icon.png"
       },
       {
+        "title": "QuickTV - Short Drama & Movies",
+        "ratings": 3.5,
+        "appurl": "/app/in.mohalla.quicktv",
+        "icon": "/assets/images/apps/quick-tv/icon.png"
+      },
+      {
+        "title": "IPTV Player - Smart Live TV",
+        "ratings": 4.3,
+        "appurl": "/app/ai.metaverse.iptv.smartplayer.onlinetv",
+        "icon": "/assets/images/apps/iptv-player/icon.png"
+      },
+      {
+        "title": "Spectrum TV",
+        "ratings": 4.7,
+        "appurl": "/app/com.TWCableTV",
+        "icon": "/assets/images/apps/spectrum-tv/icon.png"
+      },
+      {
+        "title": "ABPV－America’s best pics, vids",
+        "ratings": 4.3,
+        "appurl": "/app/com.americasbestpics",
+        "icon": "/assets/images/apps/abpv-america/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.3,
         "appurl": "/app/test",
-        "icon": "/assets/images/apps/test/icon.png"
-      },
-      {
-        "title": "Test..",
-        "ratings": 4.3,
-        "appurl": "/app/test1",
         "icon": "/assets/images/apps/test/icon.png"
       }
     ]
