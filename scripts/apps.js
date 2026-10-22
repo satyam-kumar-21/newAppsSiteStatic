@@ -268,6 +268,132 @@ const appCategories = [
         "icon": "/assets/images/apps/hulu-for-android-tv/icon.png"
       },
       {
+        "title": "The NBC App - Stream TV Shows",
+        "ratings": 4.2,
+        "appurl": "/app/com.nbcuni.nbc",
+        "icon": "/assets/images/apps/the-nbc-app-stream-tv-shows/icon.png"
+      },
+      {
+        "title": "GeForce NOW Cloud Gaming",
+        "ratings": 3.5,
+        "appurl": "/app/com.nvidia.geforcenow",
+        "icon": "/assets/images/apps/geforce-now-cloud-gaming/icon.png"
+      },
+      {
+        "title": "Patreon",
+        "ratings": 4.8,
+        "appurl": "/app/com.patreon.android",
+        "icon": "/assets/images/apps/patreon/icon.png"
+      },
+      {
+        "title": "Video Downloader - VDownloader",
+        "ratings": 4.1,
+        "appurl": "/app/com.videodownloader.mks",
+        "icon": "/assets/images/apps/video-downloader/icon.png"
+      },
+      {
+        "title": "Vimeo",
+        "ratings": 3.4,
+        "appurl": "/app/com.vimeo.android.videoapp",
+        "icon": "/assets/images/apps/vimeo/icon.png"
+      },
+      {
+        "title": "WePlay - Game and Party",
+        "ratings": 4.3,
+        "appurl": "/app/com.wejoy.weplay.us",
+        "icon": "/assets/images/apps/we-play/icon.png"
+      },
+      {
+        "title": "BonusTV",
+        "ratings": 4.6,
+        "appurl": "/app/com.wtv.winkitv",
+        "icon": "/assets/images/apps/bonus-tv/icon.png"
+      },
+      {
+        "title": "WWE",
+        "ratings": 4.5,
+        "appurl": "/app/com.wwe.universe",
+        "icon": "/assets/images/apps/wwe/icon.png"
+      },
+      {
+        "title": "Play Tube - Popup Video Player",
+        "ratings": 4.2,
+        "appurl": "/app/io.adsfree.vanced",
+        "icon": "/assets/images/apps/play-tube/icon.png"
+      },
+      {
+        "title": "CBS",
+        "ratings": 3.9,
+        "appurl": "/app/com.cbs.tve",
+        "icon": "/assets/images/apps/cbs/icon.png"
+      },
+      {
+        "title": "FreeTV: Películas, Series y TV",
+        "ratings": 3.3,
+        "appurl": "/app/com.ottoly.freetv",
+        "icon": "/assets/images/apps/freetv/icon.png"
+      },
+      {
+        "title": "Worldstar Hip Hop & Rap News",
+        "ratings": 4.6,
+        "appurl": "/app/com.pt.wshhp",
+        "icon": "/assets/images/apps/worldstar/icon.png"
+      },
+      {
+        "title": "The Roku Channel",
+        "ratings": 4,
+        "appurl": "/app/com.roku.web.trc",
+        "icon": "/assets/images/apps/roku-channel/icon.png"
+      },
+      {
+        "title": "BonusTV Pro",
+        "ratings": 4.7,
+        "appurl": "/app/com.wtv.winkitv.pro",
+        "icon": "/assets/images/apps/bonus-tv-pro/icon.png"
+      },
+      {
+        "title": "Xumo Play",
+        "ratings": 3.8,
+        "appurl": "/app/com.xumo.xumo.tv",
+        "icon": "/assets/images/apps/xumo-play/icon.png"
+      },
+      {
+        "title": "Magic Music Player",
+        "ratings": 4.2,
+        "appurl": "/app/com.zpp.music.player",
+        "icon": "/assets/images/apps/magic-music-player/icon.png"
+      },
+      {
+        "title": "MyTunes : AI Music Generator",
+        "ratings": 4.6,
+        "appurl": "/app/ai.music.app",
+        "icon": "/assets/images/apps/mytunes/icon.png"
+      },
+      {
+        "title": "Amazon Kids Parent Dashboard",
+        "ratings": 4.2,
+        "appurl": "/app/com.amazon.tahoe.grownups",
+        "icon": "/assets/images/apps/amazon-kids-parent-dashboard/icon.png"
+      },
+      {
+        "title": "Cat Translator – Human to Pet",
+        "ratings": 4.3,
+        "appurl": "/app/com.artpol.cat.translator",
+        "icon": "/assets/images/apps/cat-translator/icon.png"
+      },
+      {
+        "title": "FlexTV: Short Drama, Reels, TV",
+        "ratings": 4.5,
+        "appurl": "/app/com.aytech.flextv",
+        "icon": "/assets/images/apps/flex-tv/icon.png"
+      },
+      {
+        "title": "BritBox: Home of British TV",
+        "ratings": 3.6,
+        "appurl": "/app/com.britbox.us",
+        "icon": "/assets/images/apps/britbox/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.3,
         "appurl": "/app/test1",
