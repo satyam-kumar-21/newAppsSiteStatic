@@ -616,6 +616,42 @@ const appCategories = [
     "slug": "shopping",
     "apps": [
       {
+        "title": "DealSeek: Coupons & Discounts",
+        "ratings": 4.8,
+        "appurl": "/app/com.dealseekorg.dealseek",
+        "icon": "/assets/images/apps/dealseek/icon.png"
+      },
+      {
+        "title": "Vinted: Shop & sell pre-loved",
+        "ratings": 4.5,
+        "appurl": "/app/fr.vinted",
+        "icon": "/assets/images/apps/vinted-shop-sell/icon.png"
+      },
+      {
+        "title": "Walmart: Shopping & Savings",
+        "ratings": 4.7,
+        "appurl": "/app/com.walmart.android",
+        "icon": "/assets/images/apps/walmart/icon.webp"
+      },
+      {
+        "title": "AliExpress - Shopping App",
+        "ratings": 4.3,
+        "appurl": "/app/com.alibaba.aliexpresshd",
+        "icon": "/assets/images/apps/aliexpress/icon.png"
+      },
+      {
+        "title": "Whatnot: Shop, Sell, Connect",
+        "ratings": 4.7,
+        "appurl": "/app/com.whatnot_mobile",
+        "icon": "/assets/images/apps/whatnot/icon.png"
+      },
+      {
+        "title": "Amazon Shopping",
+        "ratings": 4.4,
+        "appurl": "/app/com.amazon.mShop.android.shopping",
+        "icon": "/assets/images/apps/amazon-shopping/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
