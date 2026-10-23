@@ -533,375 +533,105 @@ const appCategories = [
       },
       {
         "title": "PuzzlePlay: Games & Rewards",
-        "ratings": 4.3,
+        "ratings": 4.5,
         "appurl": "/app/app.puzzleplay.client",
         "icon": "/assets/images/apps/puzzleplay/icon.png"
       },
       {
-        "title": "Test",
+        "title": "LiteTV - Short Dramas & Movies",
+        "ratings": 4.6,
+        "appurl": "/app/co.topinnovations.litetv",
+        "icon": "/assets/images/apps/litetv/icon.png"
+      },
+      {
+        "title": "Frndly TV",
+        "ratings": 3.6,
+        "appurl": "/app/com.frndlytv",
+        "icon": "/assets/images/apps/frndlytv/icon.png"
+      },
+      {
+        "title": "Novelvio - Read & Earn",
+        "ratings": 4.1,
+        "appurl": "/app/com.novelvio.cash",
+        "icon": "/assets/images/apps/novelvio/icon.png"
+      },
+      {
+        "title": "TapTap Maker",
+        "ratings": 4.6,
+        "appurl": "/app/com.taptap.global.lite",
+        "icon": "/assets/images/apps/tap-tap-maker/icon.png"
+      },
+      {
+        "title": "TeamTV",
+        "ratings": 3.6,
+        "appurl": "/app/tv.mediastage.beetv",
+        "icon": "/assets/images/apps/team-tv/icon.png"
+      },
+      {
+        "title": "Georgia Lottery Official App",
+        "ratings": 3.2,
+        "appurl": "/app/com.crowncards.app",
+        "icon": "/assets/images/apps/georgia-lottery/icon.png"
+      },
+      {
+        "title": "MeritTV",
         "ratings": 4.3,
-        "appurl": "/app/test1",
+        "appurl": "/app/com.meritplus.android",
+        "icon": "/assets/images/apps/merit-tv/icon.png"
+      },
+      {
+        "title": "SuperBFF - BFF Test",
+        "ratings": 4.6,
+        "appurl": "/app/nl.vanilla.superbff",
+        "icon": "/assets/images/apps/superbff/icon.png"
+      },
+      {
+        "title": "Star Gazer",
+        "ratings": 2.9,
+        "appurl": "/app/shapps.stargazer",
+        "icon": "/assets/images/apps/star-gazer/icon.png"
+      },
+      {
+        "title": "Logitech G",
+        "ratings": 4.2,
+        "appurl": "/app/com.astrogaming.scorpius",
+        "icon": "/assets/images/apps/logitech-g/icon.png"
+      },
+      {
+        "title": "Doku: Binge. Create. Repeat",
+        "ratings": 3.7,
+        "appurl": "/app/com.kumadrama.doku",
+        "icon": "/assets/images/apps/doku/icon.png"
+      },
+      {
+        "title": "Truth+",
+        "ratings": 3.7,
+        "appurl": "/app/com.truthsocial.android.app.plus",
+        "icon": "/assets/images/apps/truth-plus/icon.png"
+      }
+    ]
+  },
+  {
+    "name": "Shopping",
+    "slug": "shopping",
+    "apps": [
+      {
+        "title": "Test",
+        "ratings": 4.2,
+        "appurl": "/app/test",
         "icon": "/assets/images/apps/test/icon.png"
       }
     ]
   },
   {
-    "name": "Photo & Video",
-    "slug": "photo-video",
+    "name": "Test",
+    "slug": "test",
     "apps": [
       {
-        "title": "TikTok",
+        "title": "Test1",
         "ratings": 4.2,
-        "appurl": "/app/tiktok",
-        "icon": "/assets/images/apps/tiktok/icon.webp"
-      },
-      {
-        "title": "CapCut",
-        "ratings": 4.4,
-        "appurl": "/app/capcut",
-        "icon": "/assets/images/apps/capcut/icon.webp"
-      },
-      {
-        "title": "Adobe Lightroom",
-        "ratings": 4.6,
-        "appurl": "/app/lightroom",
-        "icon": "/assets/images/apps/lightroom/icon.webp"
-      },
-      {
-        "title": "Snapseed",
-        "ratings": 4.5,
-        "appurl": "/app/snapseed",
-        "icon": "/assets/images/apps/snapseed/icon.webp"
-      },
-      {
-        "title": "Picsart Photo & Video Editor",
-        "ratings": 4.3,
-        "appurl": "/app/picsart",
-        "icon": "/assets/images/apps/picsart/icon.webp"
-      },
-      {
-        "title": "Canva",
-        "ratings": 4.7,
-        "appurl": "/app/canva",
-        "icon": "/assets/images/apps/canva/icon.webp"
-      },
-      {
-        "title": "VSCO: Photo & Video Editor",
-        "ratings": 4.2,
-        "appurl": "/app/vsco",
-        "icon": "/assets/images/apps/vsco/icon.webp"
-      },
-      {
-        "title": "InShot Video Editor",
-        "ratings": 4.8,
-        "appurl": "/app/inshot",
-        "icon": "/assets/images/apps/inshot/icon.webp"
-      },
-      {
-        "title": "Vimeo",
-        "ratings": 4.3,
-        "appurl": "/app/vimeo",
-        "icon": "/assets/images/apps/vimeo/icon.webp"
-      },
-      {
-        "title": "FaceApp",
-        "ratings": 4.4,
-        "appurl": "/app/faceapp",
-        "icon": "/assets/images/apps/faceapp/icon.webp"
-      },
-      {
-        "title": "Photoleap Editor",
-        "ratings": 4.4,
-        "appurl": "/app/photoleap",
-        "icon": "/assets/images/apps/photoleap/icon.webp"
-      },
-      {
-        "title": "Filmora Video Editor",
-        "ratings": 4.5,
-        "appurl": "/app/filmora",
-        "icon": "/assets/images/apps/filmora/icon.webp"
-      },
-      {
-        "title": "Lensa AI Editor",
-        "ratings": 4.1,
-        "appurl": "/app/lensa",
-        "icon": "/assets/images/apps/lensa/icon.webp"
-      },
-      {
-        "title": "KineMaster",
-        "ratings": 4.2,
-        "appurl": "/app/kinemaster",
-        "icon": "/assets/images/apps/kinemaster/icon.webp"
-      }
-    ]
-  },
-  {
-    "name": "Music & Audio",
-    "slug": "music-audio",
-    "apps": [
-      {
-        "title": "YouTube Music",
-        "ratings": 4.5,
-        "appurl": "/app/youtube-music",
-        "icon": "/assets/images/apps/youtube-music/icon.webp"
-      },
-      {
-        "title": "Shazam",
-        "ratings": 4.8,
-        "appurl": "/app/shazam",
-        "icon": "/assets/images/apps/shazam/icon.webp"
-      },
-      {
-        "title": "Spotify",
-        "ratings": 4.4,
-        "appurl": "/app/spotify",
-        "icon": "/assets/images/apps/spotify/icon.webp"
-      },
-      {
-        "title": "SoundCloud",
-        "ratings": 4.5,
-        "appurl": "/app/soundcloud",
-        "icon": "/assets/images/apps/soundcloud/icon.webp"
-      },
-      {
-        "title": "Amazon Music",
-        "ratings": 4.3,
-        "appurl": "/app/amazon-music",
-        "icon": "/assets/images/apps/amazon-music/icon.webp"
-      },
-      {
-        "title": "Deezer Music Player",
-        "ratings": 4.4,
-        "appurl": "/app/deezer",
-        "icon": "/assets/images/apps/deezer/icon.webp"
-      },
-      {
-        "title": "TIDAL Music",
-        "ratings": 4.2,
-        "appurl": "/app/tidal",
-        "icon": "/assets/images/apps/tidal/icon.webp"
-      },
-      {
-        "title": "Audible: Audiobooks & Stories",
-        "ratings": 4.6,
-        "appurl": "/app/audible",
-        "icon": "/assets/images/apps/audible/icon.webp"
-      },
-      {
-        "title": "Bandcamp",
-        "ratings": 4.7,
-        "appurl": "/app/bandcamp",
-        "icon": "/assets/images/apps/bandcamp/icon.webp"
-      },
-      {
-        "title": "TuneIn Radio",
-        "ratings": 4.3,
-        "appurl": "/app/tunein-radio",
-        "icon": "/assets/images/apps/tunein-radio/icon.webp"
-      },
-      {
-        "title": "Musixmatch Lyrics",
-        "ratings": 4.4,
-        "appurl": "/app/musixmatch",
-        "icon": "/assets/images/apps/musixmatch/icon.webp"
-      },
-      {
-        "title": "Pocket Casts",
-        "ratings": 4.5,
-        "appurl": "/app/pocket-casts",
-        "icon": "/assets/images/apps/pocket-casts/icon.webp"
-      },
-      {
-        "title": "Poweramp Music Player",
-        "ratings": 4.5,
-        "appurl": "/app/poweramp",
-        "icon": "/assets/images/apps/poweramp/icon.webp"
-      },
-      {
-        "title": "iHeartRadio",
-        "ratings": 4.6,
-        "appurl": "/app/iheartradio",
-        "icon": "/assets/images/apps/iheartradio/icon.webp"
-      }
-    ]
-  },
-  {
-    "name": "Communication",
-    "slug": "communication",
-    "apps": [
-      {
-        "title": "Gmail",
-        "ratings": 4.2,
-        "appurl": "/app/gmail",
-        "icon": "/assets/images/apps/gmail/icon.webp"
-      },
-      {
-        "title": "Zoom Workplace",
-        "ratings": 4.1,
-        "appurl": "/app/zoom",
-        "icon": "/assets/images/apps/zoom/icon.webp"
-      },
-      {
-        "title": "WhatsApp Messenger",
-        "ratings": 4.3,
-        "appurl": "/app/whatsapp",
-        "icon": "/assets/images/apps/whatsapp/icon.webp"
-      },
-      {
-        "title": "Telegram",
-        "ratings": 4.4,
-        "appurl": "/app/telegram",
-        "icon": "/assets/images/apps/telegram/icon.webp"
-      },
-      {
-        "title": "Signal Private Messenger",
-        "ratings": 4.6,
-        "appurl": "/app/signal",
-        "icon": "/assets/images/apps/signal/icon.webp"
-      },
-      {
-        "title": "Viber Rakuten",
-        "ratings": 4.3,
-        "appurl": "/app/viber",
-        "icon": "/assets/images/apps/viber/icon.webp"
-      },
-      {
-        "title": "Skype",
-        "ratings": 4.1,
-        "appurl": "/app/skype",
-        "icon": "/assets/images/apps/skype/icon.webp"
-      },
-      {
-        "title": "Microsoft Outlook",
-        "ratings": 4.5,
-        "appurl": "/app/outlook",
-        "icon": "/assets/images/apps/outlook/icon.webp"
-      },
-      {
-        "title": "Google Meet",
-        "ratings": 4.4,
-        "appurl": "/app/google-meet",
-        "icon": "/assets/images/apps/google-meet/icon.webp"
-      },
-      {
-        "title": "LINE: Calls & Messages",
-        "ratings": 4.2,
-        "appurl": "/app/line",
-        "icon": "/assets/images/apps/line/icon.webp"
-      },
-      {
-        "title": "Element Messenger",
-        "ratings": 4.3,
-        "appurl": "/app/element",
-        "icon": "/assets/images/apps/element/icon.webp"
-      },
-      {
-        "title": "Truecaller",
-        "ratings": 4.4,
-        "appurl": "/app/truecaller",
-        "icon": "/assets/images/apps/truecaller/icon.webp"
-      },
-      {
-        "title": "Cisco Webex Meetings",
-        "ratings": 4.2,
-        "appurl": "/app/webex",
-        "icon": "/assets/images/apps/webex/icon.webp"
-      },
-      {
-        "title": "WeChat",
-        "ratings": 3.8,
-        "appurl": "/app/wechat",
-        "icon": "/assets/images/apps/wechat/icon.webp"
-      }
-    ]
-  },
-  {
-    "name": "Productivity",
-    "slug": "productivity",
-    "apps": [
-      {
-        "title": "Microsoft OneDrive",
-        "ratings": 4.5,
-        "appurl": "/app/microsoft-onedrive",
-        "icon": "/assets/images/apps/onedrive/icon.webp"
-      },
-      {
-        "title": "Microsoft Teams",
-        "ratings": 4.6,
-        "appurl": "/app/microsoft-teams",
-        "icon": "/assets/images/apps/microsoft-teams/icon.webp"
-      },
-      {
-        "title": "Notion - Notes, Docs, Tasks",
-        "ratings": 4.7,
-        "appurl": "/app/notion",
-        "icon": "/assets/images/apps/notion/icon.webp"
-      },
-      {
-        "title": "Google Drive",
-        "ratings": 4.4,
-        "appurl": "/app/google-drive",
-        "icon": "/assets/images/apps/google-drive/icon.webp"
-      },
-      {
-        "title": "Evernote - Note Organizer",
-        "ratings": 4.2,
-        "appurl": "/app/evernote",
-        "icon": "/assets/images/apps/evernote/icon.webp"
-      },
-      {
-        "title": "Todoist: To-Do List & Planner",
-        "ratings": 4.6,
-        "appurl": "/app/todoist",
-        "icon": "/assets/images/apps/todoist/icon.webp"
-      },
-      {
-        "title": "Trello: Organize Anything",
-        "ratings": 4.3,
-        "appurl": "/app/trello",
-        "icon": "/assets/images/apps/trello/icon.webp"
-      },
-      {
-        "title": "Google Keep - Notes and Lists",
-        "ratings": 4.3,
-        "appurl": "/app/google-keep",
-        "icon": "/assets/images/apps/google-keep/icon.webp"
-      },
-      {
-        "title": "Slack",
-        "ratings": 4.4,
-        "appurl": "/app/slack",
-        "icon": "/assets/images/apps/slack/icon.webp"
-      },
-      {
-        "title": "Microsoft Excel",
-        "ratings": 4.5,
-        "appurl": "/app/microsoft-excel",
-        "icon": "/assets/images/apps/microsoft-excel/icon.webp"
-      },
-      {
-        "title": "CamScanner PDF Scanner",
-        "ratings": 4.7,
-        "appurl": "/app/camscanner",
-        "icon": "/assets/images/apps/camscanner/icon.webp"
-      },
-      {
-        "title": "Dropbox: Cloud Storage",
-        "ratings": 4.3,
-        "appurl": "/app/dropbox",
-        "icon": "/assets/images/apps/dropbox/icon.webp"
-      },
-      {
-        "title": "TickTick: ToDo List & Calendar",
-        "ratings": 4.7,
-        "appurl": "/app/ticktick",
-        "icon": "/assets/images/apps/ticktick/icon.webp"
-      },
-      {
-        "title": "Asana: Work & Task Organizer",
-        "ratings": 4.5,
-        "appurl": "/app/asana",
-        "icon": "/assets/images/apps/asana/icon.webp"
+        "appurl": "/app/test1",
+        "icon": "/assets/images/apps/test1/icon.png"
       }
     ]
   }
