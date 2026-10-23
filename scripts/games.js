@@ -1,7 +1,7 @@
 const appCategories = [
   {
-    "name": "Entertainment",
-    "slug": "Entertainment",
+    "name": "Action",
+    "slug": "Action",
     "apps": [
       {
         "title": "Free Fire x NARUTO SHIPPUDEN",
