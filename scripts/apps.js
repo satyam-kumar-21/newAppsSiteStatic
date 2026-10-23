@@ -394,6 +394,150 @@ const appCategories = [
         "icon": "/assets/images/apps/britbox/icon.png"
       },
       {
+        "title": "Miss Universe",
+        "ratings": 3.1,
+        "appurl": "/app/com.choicely.missuniverse",
+        "icon": "/assets/images/apps/miss-universe/icon.png"
+      },
+      {
+        "title": "Cinépolis Cinemas Indonesia",
+        "ratings": 4,
+        "appurl": "/app/com.cinemaxx.activity",
+        "icon": "/assets/images/apps/cinepolis-cinemas-indonesia/icon.png"
+      },
+      {
+        "title": "GMA Play",
+        "ratings": 3.8,
+        "appurl": "/app/com.gmanmi.entertainment.mobile",
+        "icon": "/assets/images/apps/gma-play/icon.png"
+      },
+      {
+        "title": "Halo Reels Max",
+        "ratings": 4.7,
+        "appurl": "/app/com.halo.reels.movie.fast.max",
+        "icon": "/assets/images/apps/halo-reels-max/icon.png"
+      },
+      {
+        "title": "Fun Drama - Watch Short Dramas",
+        "ratings": 3.7,
+        "appurl": "/app/com.hifun.drama.video",
+        "icon": "/assets/images/apps/fun-drama/icon.png"
+      },
+      {
+        "title": "CocoFun - Funny Videos & Memes",
+        "ratings": 4.2,
+        "appurl": "/app/com.icocofun.us.maga",
+        "icon": "/assets/images/apps/cocofun/icon.png"
+      },
+      {
+        "title": "Fizz TV",
+        "ratings": 4.5,
+        "appurl": "/app/com.joydrama.shorttv",
+        "icon": "/assets/images/apps/fizz-tv/icon.png"
+      },
+      {
+        "title": "Lie Detector Test Prank - Scan",
+        "ratings": 4.6,
+        "appurl": "/app/com.lie.detector.test.prank.scan.truthtest",
+        "icon": "/assets/images/apps/lie-detector-test-prank-scan/icon.png"
+      },
+      {
+        "title": "NBC - Watch Full TV Episodes",
+        "ratings": 3.4,
+        "appurl": "/app/com.nbcuni.nbc.androidtv",
+        "icon": "/assets/images/apps/nbc-watch-full-tv-episodes/icon.png"
+      },
+      {
+        "title": "Passion Drama",
+        "ratings": 4.6,
+        "appurl": "/app/com.passion.short.hotdrama",
+        "icon": "/assets/images/apps/passion-drama/icon.png"
+      },
+      {
+        "title": "Snakzy: Play Games, Earn Money",
+        "ratings": 4.5,
+        "appurl": "/app/com.playnearn",
+        "icon": "/assets/images/apps/snakzy/icon.png"
+      },
+      {
+        "title": "PA Lottery Official App",
+        "ratings": 1.6,
+        "appurl": "/app/com.sgi.palottery",
+        "icon": "/assets/images/apps/pa-lottery/icon.png"
+      },
+      {
+        "title": "Ringtone for iphone: Android™",
+        "ratings": 4,
+        "appurl": "/app/com.sonnerie.ringtone.iphone2021",
+        "icon": "/assets/images/apps/ringtone-for-iphone-android/icon.png"
+      },
+      {
+        "title": "Zeus",
+        "ratings": 4.7,
+        "appurl": "/app/com.thezeusnetwork.www",
+        "icon": "/assets/images/apps/zeus/icon.png"
+      },
+      {
+        "title": "WePlay(ويبلاي) - Game & Chat",
+        "ratings": 4.2,
+        "appurl": "/app/com.wejoy.weplay.ar",
+        "icon": "/assets/images/apps/weplay/icon.png"
+      },
+      {
+        "title": "ZDF | Streaming und Live-TV",
+        "ratings": 4.3,
+        "appurl": "/app/com.zdf.android.mediathek",
+        "icon": "/assets/images/apps/zdf/icon.png"
+      },
+      {
+        "title": "Almanasa",
+        "ratings": 3.5,
+        "appurl": "/app/iq.almanasa.android",
+        "icon": "/assets/images/apps/almanasa/icon.png"
+      },
+      {
+        "title": "LookTV",
+        "ratings": 2.9,
+        "appurl": "/app/net.giitd.looktv.main",
+        "icon": "/assets/images/apps/looktv/icon.png"
+      },
+      {
+        "title": "Atom - Movie Tickets & Times",
+        "ratings": 4.2,
+        "appurl": "/app/org.gamatech.androidclient.app",
+        "icon": "/assets/images/apps/atom/icon.png"
+      },
+      {
+        "title": "Remote for Fire TV & FireStick",
+        "ratings": 4,
+        "appurl": "/app/tv.remote.control.firetv",
+        "icon": "/assets/images/apps/remote-for-fire-tv/icon.png"
+      },
+      {
+        "title": "HISTORY: Shows & Documentaries",
+        "ratings": 2.9,
+        "appurl": "/app/com.aetn.history.watch.androidtv",
+        "icon": "/assets/images/apps/history-shows-documentaries/icon.png"
+      },
+      {
+        "title": "Pocket Saga - Short Dramas",
+        "ratings": 4.7,
+        "appurl": "/app/com.pocketfm.toons",
+        "icon": "/assets/images/apps/pocket-saga/icon.png"
+      },
+      {
+        "title": "Nex Drama",
+        "ratings": 4.6,
+        "appurl": "/app/com.short.nexdrama",
+        "icon": "/assets/images/apps/nex-drama/icon.png"
+      },
+      {
+        "title": "PuzzlePlay: Games & Rewards",
+        "ratings": 4.3,
+        "appurl": "/app/app.puzzleplay.client",
+        "icon": "/assets/images/apps/puzzleplay/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.3,
         "appurl": "/app/test1",
