@@ -949,14 +949,22 @@ function renderPage(app, category, allApps, shell) {
   const canonicalUrl = absoluteUrl(app.pagePath);
   const iconUrl = app.icon ? assetUrl(safeLocalPath(app.icon, `${app.title} icon`)) : "";
   const imageMetadata = iconUrl ? `<meta property="og:image" content="${escapeHtml(iconUrl)}" /><meta name="twitter:image" content="${escapeHtml(iconUrl)}" />` : "";
-  const descriptions = [app.description1, app.description2].filter(Boolean)
-    .map((text) => `<div class="app-detail-rich-content">${renderContentHtml(text)}</div>`)
-    .join("\n");
+  const adSlot = (placement) => renderAdSlot(`${ITEMS_LABEL}-${app.pagePath.slice(ROUTE_PREFIX.length)}-${placement}`);
+  const description1 = app.description1
+    ? `<div class="app-detail-rich-content">${renderContentHtml(app.description1)}</div>`
+    : "";
+  const description2 = app.description2
+    ? `<div class="app-detail-rich-content">${renderContentHtml(app.description2)}</div>`
+    : "";
+  const descriptions = [
+    description1,
+    description1 && description2 ? adSlot("description1") : "",
+    description2,
+  ].filter(Boolean).join("\n");
   const ratingCount = Number(app["ratings-counts"]) || 0;
   const heroIcon = app.icon
     ? `<img class="app-detail-hero-icon" src="${escapeHtml(assetUrl(safeLocalPath(app.icon, `${app.title} icon`)))}" alt="${escapeHtml(`${app.title} ${ITEM_LABEL} icon`)}" width="88" height="88" fetchpriority="high" />`
     : `<span class="app-detail-hero-fallback" aria-hidden="true">${escapeHtml(app.title.slice(0, 2).toUpperCase())}</span>`;
-  const adSlot = (placement) => renderAdSlot(`${ITEMS_LABEL}-${app.pagePath.slice(ROUTE_PREFIX.length)}-${placement}`);
   const hasScreenshots = Array.isArray(app.screenshots) && app.screenshots.length > 0;
   const hasStoreLinks = Boolean(app["playstore-url"] || app["appstore-url"]);
 
