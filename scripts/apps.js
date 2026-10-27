@@ -652,6 +652,324 @@ const appCategories = [
         "icon": "/assets/images/apps/amazon-shopping/icon.png"
       },
       {
+        "title": "SHEIN-Shopping Online",
+        "ratings": 4.8,
+        "appurl": "/app/com.zzkko",
+        "icon": "/assets/images/apps/shein-shopping/icon.png"
+      },
+      {
+        "title": "Shop: Track, Pay, Discover",
+        "ratings": 4.4,
+        "appurl": "/app/com.shopify.arrive",
+        "icon": "/assets/images/apps/shop-track-pay-discover/icon.png"
+      },
+      {
+        "title": "Depop - Buy & Sell Clothes",
+        "ratings": 4.8,
+        "appurl": "/app/com.depop",
+        "icon": "/assets/images/apps/depop-buy-sell-clothes/icon.png"
+      },
+      {
+        "title": "Costco Wholesale",
+        "ratings": 4.8,
+        "appurl": "/app/com.costco.app.android",
+        "icon": "/assets/images/apps/costco-wholesale/icon.png"
+      },
+      {
+        "title": "eBay online shopping & selling",
+        "ratings": 4.5,
+        "appurl": "/app/com.ebay.mobile",
+        "icon": "/assets/images/apps/ebay-online-shopping/icon.png"
+      },
+      {
+        "title": "Dollar General-Digital Coupons",
+        "ratings": 4.7,
+        "appurl": "/app/com.dollargeneral.android",
+        "icon": "/assets/images/apps/dollargeneral/icon.png"
+      },
+      {
+        "title": "MintPull",
+        "ratings": 4.4,
+        "appurl": "/app/com.garooms.tcgpackcash.gp",
+        "icon": "/assets/images/apps/mint-pull/icon.png"
+      },
+      {
+        "title": "Target: Shop. Style. Save.",
+        "ratings": 4.9,
+        "appurl": "/app/com.target.ui",
+        "icon": "/assets/images/apps/target-shop-style-save/icon.png"
+      },
+      {
+        "title": "Wish: Shop and Save",
+        "ratings": 4.7,
+        "appurl": "/app/com.contextlogic.wish",
+        "icon": "/assets/images/apps/Wish-Shop-and-Save/icon.png"
+      },
+      {
+        "title": "Flipkart Online Shopping App",
+        "ratings": 4.5,
+        "appurl": "/app/com.flipkart.android",
+        "icon": "/assets/images/apps/flipkart/icon.png"
+      },
+      {
+        "title": "Meesho: Online Shopping App",
+        "ratings": 4.3,
+        "appurl": "/app/com.meesho.supply",
+        "icon": "/assets/images/apps/meesho/icon.png"
+      },
+      {
+        "title": "bigbasket: Groceries and more",
+        "ratings": 4.8,
+        "appurl": "/app/com.bigbasket.mobileapp",
+        "icon": "/assets/images/apps/bigbasket/icon.png"
+      },
+      {
+        "title": "Snapdeal Trendy Budget Fashion",
+        "ratings": 4.2,
+        "appurl": "/app/com.snapdeal.main",
+        "icon": "/assets/images/apps/Snapdeal/icon.png"
+      },
+      {
+        "title": "Trendyol - Online Alışveriş",
+        "ratings": 4.3,
+        "appurl": "/app/trendyol.com",
+        "icon": "/assets/images/apps/trendyol/icon.png"
+      },
+      {
+        "title": "adidas: Shop Shoes & Clothing",
+        "ratings": 4.7,
+        "appurl": "/app/com.adidas.app",
+        "icon": "/assets/images/apps/adidas/icon.png"
+      },
+      {
+        "title": "H&M",
+        "ratings": 4.2,
+        "appurl": "/app/com.hm.goe",
+        "icon": "/assets/images/apps/hm/icon.png"
+      },
+      {
+        "title": "Zara",
+        "ratings": 4.8,
+        "appurl": "/app/com.inditex.zara",
+        "icon": "/assets/images/apps/zara/icon.png"
+      },
+      {
+        "title": "Nike: Engineered for Athletes",
+        "ratings": 4.7,
+        "appurl": "/app/com.nike.omega",
+        "icon": "/assets/images/apps/nike/icon.png"
+      },
+      {
+        "title": "Affirm: Buy now, pay over time",
+        "ratings": 4.8,
+        "appurl": "/app/com.affirm.central",
+        "icon": "/assets/images/apps/affirm/icon.png"
+      },
+      {
+        "title": "ASOS - Shop Fashion Online",
+        "ratings": 4.6,
+        "appurl": "/app/com.asos.app",
+        "icon": "/assets/images/apps/asos/icon.png"
+      },
+      {
+        "title": "MANGO - Online fashion",
+        "ratings": 4.5,
+        "appurl": "/app/com.dylvian.mango.activities",
+        "icon": "/assets/images/apps/mango/icon.png"
+      },
+      {
+        "title": "Family Dollar",
+        "ratings": 3.7,
+        "appurl": "/app/com.familydollar",
+        "icon": "/assets/images/apps/familydollar/icon.png"
+      },
+      {
+        "title": "IKEA",
+        "ratings": 4.7,
+        "appurl": "/app/com.ingka.ikea.app",
+        "icon": "/assets/images/apps/ikea/icon.png"
+      },
+      {
+        "title": "PatPat - Kids & Baby Clothing",
+        "ratings": 4.6,
+        "appurl": "/app/com.interfocusllc.patpat",
+        "icon": "/assets/images/apps/patpat/icon.png"
+      },
+      {
+        "title": "Kroger",
+        "ratings": 4.5,
+        "appurl": "/app/com.kroger.mobile",
+        "icon": "/assets/images/apps/Kroger/icon.png"
+      },
+      {
+        "title": "Shop Samsung",
+        "ratings": 4.7,
+        "appurl": "/app/com.samsung.ecomm",
+        "icon": "/assets/images/apps/shop-samsung/icon.png"
+      },
+      {
+        "title": "Wayfair - Shop All Things Home",
+        "ratings": 4.8,
+        "appurl": "/app/com.wayfair.wayfair",
+        "icon": "/assets/images/apps/wayfair/icon.png"
+      },
+      {
+        "title": "Fashion Nova: Trendy Shopping",
+        "ratings": 4.8,
+        "appurl": "/app/co.tapcart.app.npQt0DXZpj",
+        "icon": "/assets/images/apps/fashion-nova/icon.png"
+      },
+      {
+        "title": "CONFIRMED | Sneakers & more",
+        "ratings": 4.3,
+        "appurl": "/app/com.adidas.confirmed.app",
+        "icon": "/assets/images/apps/confirmed-sneakers/icon.png"
+      },
+      {
+        "title": "GOAT – Sneakers & Apparel",
+        "ratings": 3.7,
+        "appurl": "/app/com.airgoat.goat",
+        "icon": "/assets/images/apps/goat-sneakers/icon.png"
+      },
+      {
+        "title": "Nike SNKRS: Shoes & Streetwear",
+        "ratings": 4.2,
+        "appurl": "/app/com.nike.snkrs",
+        "icon": "/assets/images/apps/nike-snkrs/icon.png"
+      },
+      {
+        "title": "PetSmart",
+        "ratings": 3.9,
+        "appurl": "/app/com.petsmart.consumermobile",
+        "icon": "/assets/images/apps/PetSmart/icon.png"
+      },
+      {
+        "title": "Ace Hardware: Home Improvement",
+        "ratings": 4.7,
+        "appurl": "/app/com.acehardware.rewards",
+        "icon": "/assets/images/apps/ace-hardware/icon.png"
+      },
+      {
+        "title": "Amazon Business: B2B Shopping",
+        "ratings": 3.9,
+        "appurl": "/app/com.amazon.mShop.android.business.shopping",
+        "icon": "/assets/images/apps/amazon-business/icon.png"
+      },
+      {
+        "title": "Woolworths",
+        "ratings": 3.7,
+        "appurl": "/app/com.awfs.coordination",
+        "icon": "/assets/images/apps/woolworths/icon.png"
+      },
+      {
+        "title": "CIDER - Clothing & Fashion",
+        "ratings": 4.7,
+        "appurl": "/app/com.cider",
+        "icon": "/assets/images/apps/cider/icon.png"
+      },
+      {
+        "title": "Halara",
+        "ratings": 4.6,
+        "appurl": "/app/com.doublefs.halara",
+        "icon": "/assets/images/apps/halara/icon.png"
+      },
+      {
+        "title": "Five Below: Shop Fun Finds",
+        "ratings": 4.2,
+        "appurl": "/app/com.hollar.android",
+        "icon": "/assets/images/apps/five-below/icon.png"
+      },
+      {
+        "title": "Menards®",
+        "ratings": 4.8,
+        "appurl": "/app/com.menards.mobile",
+        "icon": "/assets/images/apps/menards/icon.png"
+      },
+      {
+        "title": "Nintendo Store",
+        "ratings": 3.8,
+        "appurl": "/app/com.nintendo.znej",
+        "icon": "/assets/images/apps/nintendo-store/icon.png"
+      },
+      {
+        "title": "Nordstrom",
+        "ratings": 4.9,
+        "appurl": "/app/com.nordstrom.app",
+        "icon": "/assets/images/apps/nordstrom/icon.png"
+      },
+      {
+        "title": "Ralphs",
+        "ratings": 4.4,
+        "appurl": "/app/com.ralphs.mobile",
+        "icon": "/assets/images/apps/ralphs/icon.png"
+      },
+      {
+        "title": "SIMON - Malls, Mills & Outlets",
+        "ratings": 4.8,
+        "appurl": "/app/com.simon.app.simonmalls",
+        "icon": "/assets/images/apps/simon-malls/icon.png"
+      },
+      {
+        "title": "TORRID",
+        "ratings": 4.8,
+        "appurl": "/app/com.torrid.android",
+        "icon": "/assets/images/apps/torrid/icon.png"
+      },
+      {
+        "title": "LOUIS VUITTON",
+        "ratings": 4.3,
+        "appurl": "/app/com.vuitton.android",
+        "icon": "/assets/images/apps/louis-vuitton/icon.png"
+      },
+      {
+        "title": "Sprouts",
+        "ratings": 4.8,
+        "appurl": "/app/net.groceryshopping.SproutsFarmersMarket",
+        "icon": "/assets/images/apps/sprouts/icon.png"
+      },
+      {
+        "title": "Ashley",
+        "ratings": 2.9,
+        "appurl": "/app/com.ashleyfurniturehomestore.ecomm",
+        "icon": "/assets/images/apps/ashley/icon.png"
+      },
+      {
+        "title": "OnePlus Store",
+        "ratings": 4.5,
+        "appurl": "/app/com.oneplus.store",
+        "icon": "/assets/images/apps/oneplus-store/icon.png"
+      },
+      {
+        "title": "Barcode Scanner for Walmart",
+        "ratings": 4.2,
+        "appurl": "/app/com.rucksack.barcodescannerforwalmart",
+        "icon": "/assets/images/apps/barcode-scanner-for-walmart/icon.png"
+      },
+      {
+        "title": "Athleta: Athletic Clothes",
+        "ratings": 4.9,
+        "appurl": "/app/com.gap.mobile.athleta",
+        "icon": "/assets/images/apps/athletic-clothes/icon.png"
+      },
+      {
+        "title": "Banana Republic: Shop Apparel",
+        "ratings": 4.9,
+        "appurl": "/app/com.gap.mobile.bananarepublic",
+        "icon": "/assets/images/apps/banana-republic-shop-apparel/icon.png"
+      },
+      {
+        "title": "Lulus",
+        "ratings": 4.9,
+        "appurl": "/app/com.lulus.android",
+        "icon": "/assets/images/apps/lulus/icon.png"
+      },
+      {
+        "title": "Test",
+        "ratings": 4.2,
+        "appurl": "/app/test123",
+        "icon": "/assets/images/apps/test/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
