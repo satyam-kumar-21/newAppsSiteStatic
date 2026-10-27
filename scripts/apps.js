@@ -964,16 +964,46 @@ const appCategories = [
         "icon": "/assets/images/apps/lulus/icon.png"
       },
       {
-        "title": "Test",
-        "ratings": 4.2,
-        "appurl": "/app/test123",
-        "icon": "/assets/images/apps/test/icon.png"
+        "title": "ShopGoodwill",
+        "ratings": 2.8,
+        "appurl": "/app/org.shopgoodwill.app",
+        "icon": "/assets/images/apps/shopgoodwill/icon.png"
       },
       {
-        "title": "Test",
-        "ratings": 4.2,
-        "appurl": "/app/test",
-        "icon": "/assets/images/apps/test/icon.png"
+        "title": "ABC Fine Wine & Spirits",
+        "ratings": 3.8,
+        "appurl": "/app/com.cta.abcfinewineandspirits",
+        "icon": "/assets/images/apps/abc-fine-wine-spirits/icon.png"
+      },
+      {
+        "title": "Golden Goose",
+        "ratings": 4.6,
+        "appurl": "/app/com.goldengoose.highstreet.app",
+        "icon": "/assets/images/apps/goldengoose/icon.png"
+      },
+      {
+        "title": "Quince: Luxury Essentials",
+        "ratings": 4.3,
+        "appurl": "/app/com.lastbrand.quince",
+        "icon": "/assets/images/apps/quince/icon.png"
+      },
+      {
+        "title": "Scheels",
+        "ratings": 4.7,
+        "appurl": "/app/com.scheels.shop",
+        "icon": "/assets/images/apps/scheels/icon.png"
+      },
+      {
+        "title": "Quarter Price Auction",
+        "ratings": 3.6,
+        "appurl": "/app/com.auctioneersoftware.qrt",
+        "icon": "/assets/images/apps/quarter-price-auction/icon.png"
+      },
+      {
+        "title": "Gamer Supps",
+        "ratings": 4.9,
+        "appurl": "/app/co.tapcart.app.id_nGDFF1I9N0",
+        "icon": "/assets/images/apps/gamer-supps/icon.png"
       }
     ]
   },
