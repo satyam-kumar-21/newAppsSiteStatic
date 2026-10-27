@@ -1008,13 +1008,13 @@ const appCategories = [
     ]
   },
   {
-    "name": "Test",
-    "slug": "test",
+    "name": "Tools",
+    "slug": "tools",
     "apps": [
       {
-        "title": "Test1",
+        "title": "Test",
         "ratings": 4.2,
-        "appurl": "/app/test1",
+        "appurl": "/app/test",
         "icon": "/assets/images/apps/test1/icon.png"
       }
     ]

@@ -4469,16 +4469,16 @@
           }
         ]
       },
-      "Test": {
+      "Tools": {
         "apps": [
           {
-            "appurl": "/app/test1/",
-            "title": "Test1",
+            "appurl": "/app/test/",
+            "title": "Test",
             "icon": "/assets/images/apps/test1/icon.png",
             "ratings": 4.2,
             "ratings-counts": "#",
             "downloads": "10M+",
-            "category": "Test",
+            "category": "Tools",
             "latest-version": "#",
             "publish-date": "#",
             "developer": "#",

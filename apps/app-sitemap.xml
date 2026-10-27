@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://domain.com/apps/entertainment</loc></url>
   <url><loc>https://domain.com/apps/shopping</loc></url>
-  <url><loc>https://domain.com/apps/test</loc></url>
+  <url><loc>https://domain.com/apps/tools</loc></url>
   <url><loc>https://domain.com/app/com.ss.android.ugc.tiktok.pro</loc></url>
   <url><loc>https://domain.com/app/com.google.android.apps.youtube.kids</loc></url>
   <url><loc>https://domain.com/app/com.blink.drama.player</loc></url>
@@ -170,5 +170,5 @@
   <url><loc>https://domain.com/app/com.scheels.shop</loc></url>
   <url><loc>https://domain.com/app/com.auctioneersoftware.qrt</loc></url>
   <url><loc>https://domain.com/app/co.tapcart.app.id_nGDFF1I9N0</loc></url>
-  <url><loc>https://domain.com/app/test1</loc></url>
+  <url><loc>https://domain.com/app/test</loc></url>
 </urlset>
