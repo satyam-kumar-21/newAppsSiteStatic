@@ -1120,6 +1120,42 @@ const appCategories = [
         "icon": "/assets/images/apps/files-by-google/icon.png"
       },
       {
+        "title": "Google Go",
+        "ratings": 4.3,
+        "appurl": "/app/com.google.android.apps.searchlite",
+        "icon": "/assets/images/apps/google-go/icon.png"
+      },
+      {
+        "title": "Calculator",
+        "ratings": 4.3,
+        "appurl": "/app/com.google.android.calculator",
+        "icon": "/assets/images/apps/calculator/icon.png"
+      },
+      {
+        "title": "Clock",
+        "ratings": 3.9,
+        "appurl": "/app/com.google.android.deskclock",
+        "icon": "/assets/images/apps/clock/icon.png"
+      },
+      {
+        "title": "Phone by Google",
+        "ratings": 4.4,
+        "appurl": "/app/com.google.android.dialer",
+        "icon": "/assets/images/apps/phone-by-google/icon.png"
+      },
+      {
+        "title": "Google Lens",
+        "ratings": 4.7,
+        "appurl": "/app/com.google.ar.lens",
+        "icon": "/assets/images/apps/google-lens/icon.png"
+      },
+      {
+        "title": "SHAREit: Transfer, Share Files",
+        "ratings": 4.3,
+        "appurl": "/app/com.lenovo.anyshare.gps",
+        "icon": "/assets/images/apps/shareit/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",

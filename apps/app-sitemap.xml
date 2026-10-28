@@ -188,5 +188,11 @@
   <url><loc>https://domain.com/app/com.google.android.googlequicksearchbox</loc></url>
   <url><loc>https://domain.com/app/com.google.android.inputmethod.latin</loc></url>
   <url><loc>https://domain.com/app/com.google.android.apps.nbu.files</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.searchlite</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.calculator</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.deskclock</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.dialer</loc></url>
+  <url><loc>https://domain.com/app/com.google.ar.lens</loc></url>
+  <url><loc>https://domain.com/app/com.lenovo.anyshare.gps</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
 </urlset>
