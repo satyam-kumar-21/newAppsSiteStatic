@@ -1156,6 +1156,54 @@ const appCategories = [
         "icon": "/assets/images/apps/shareit/icon.png"
       },
       {
+        "title": "Samsung Members",
+        "ratings": 4.4,
+        "appurl": "/app/com.samsung.android.voc",
+        "icon": "/assets/images/apps/samsung-members/icon.png"
+      },
+      {
+        "title": "Samsung My Files",
+        "ratings": 4.1,
+        "appurl": "/app/com.sec.android.app.myfiles",
+        "icon": "/assets/images/apps/samsung-my-files/icon.png"
+      },
+      {
+        "title": "EasyShare",
+        "ratings": 3.7,
+        "appurl": "/app/com.vivo.easyshare",
+        "icon": "/assets/images/apps/easyshare/icon.png"
+      },
+      {
+        "title": "ShareMe: File sharing",
+        "ratings": 4.6,
+        "appurl": "/app/com.xiaomi.midrop",
+        "icon": "/assets/images/apps/shareme/icon.png"
+      },
+      {
+        "title": "Galaxy Wearable",
+        "ratings": 3.7,
+        "appurl": "/app/com.samsung.android.app.watchmanager",
+        "icon": "/assets/images/apps/galaxy-wearable/icon.png"
+      },
+      {
+        "title": "Turbo VPN - Secure VPN Proxy",
+        "ratings": 4.7,
+        "appurl": "/app/free.vpn.unblock.proxy.turbovpn",
+        "icon": "/assets/images/apps/turbo-vpn/icon.png"
+      },
+      {
+        "title": "Xender - Quick Share, Transfer",
+        "ratings": 4.6,
+        "appurl": "/app/cn.xender",
+        "icon": "/assets/images/apps/xender/icon.png"
+      },
+      {
+        "title": "Zapya - File Transfer, Share",
+        "ratings": 4.6,
+        "appurl": "/app/com.dewmobile.kuaiya.play",
+        "icon": "/assets/images/apps/zapya-file-transfer/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",

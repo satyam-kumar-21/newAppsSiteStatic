@@ -194,5 +194,13 @@
   <url><loc>https://domain.com/app/com.google.android.dialer</loc></url>
   <url><loc>https://domain.com/app/com.google.ar.lens</loc></url>
   <url><loc>https://domain.com/app/com.lenovo.anyshare.gps</loc></url>
+  <url><loc>https://domain.com/app/com.samsung.android.voc</loc></url>
+  <url><loc>https://domain.com/app/com.sec.android.app.myfiles</loc></url>
+  <url><loc>https://domain.com/app/com.vivo.easyshare</loc></url>
+  <url><loc>https://domain.com/app/com.xiaomi.midrop</loc></url>
+  <url><loc>https://domain.com/app/com.samsung.android.app.watchmanager</loc></url>
+  <url><loc>https://domain.com/app/free.vpn.unblock.proxy.turbovpn</loc></url>
+  <url><loc>https://domain.com/app/cn.xender</loc></url>
+  <url><loc>https://domain.com/app/com.dewmobile.kuaiya.play</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
 </urlset>
