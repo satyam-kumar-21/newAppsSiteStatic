@@ -1066,6 +1066,60 @@ const appCategories = [
         "icon": "/assets/images/apps/google-translate/icon.png"
       },
       {
+        "title": "AntiVirus Clean Master-Cleaner",
+        "ratings": 3.6,
+        "appurl": "/app/com.anti.cleaner.phoener",
+        "icon": "/assets/images/apps/anti-virus-clean-master-cleaner/icon.png"
+      },
+      {
+        "title": "VPN - Super Unlimited Proxy",
+        "ratings": 4.7,
+        "appurl": "/app/com.free.vpn.super.hotspot.open",
+        "icon": "/assets/images/apps/vpn-super-unlimited-proxy/icon.png"
+      },
+      {
+        "title": "Samsung Smart Switch Mobile",
+        "ratings": 3.9,
+        "appurl": "/app/com.sec.android.easyMover",
+        "icon": "/assets/images/apps/samsung-smart-switch-mobile/icon.png"
+      },
+      {
+        "title": "Google’s Find Hub",
+        "ratings": 4.2,
+        "appurl": "/app/com.google.android.apps.adm",
+        "icon": "/assets/images/apps/googles-find-hub/icon.png"
+      },
+      {
+        "title": "TV Remote Control for Smart TV",
+        "ratings": 4.4,
+        "appurl": "/app/com.tv.remote.super",
+        "icon": "/assets/images/apps/tv-remote-control-for-smart-tv/icon.png"
+      },
+      {
+        "title": "Google Play services",
+        "ratings": 4.3,
+        "appurl": "/app/com.google.android.gms",
+        "icon": "/assets/images/apps/google-play-services/icon.png"
+      },
+      {
+        "title": "Google",
+        "ratings": 4,
+        "appurl": "/app/com.google.android.googlequicksearchbox",
+        "icon": "/assets/images/apps/google/icon.png"
+      },
+      {
+        "title": "Gboard - the Google Keyboard",
+        "ratings": 4.5,
+        "appurl": "/app/com.google.android.inputmethod.latin",
+        "icon": "/assets/images/apps/gboard-the-google-keyboard/icon.png"
+      },
+      {
+        "title": "Files by Google",
+        "ratings": 4.5,
+        "appurl": "/app/com.google.android.apps.nbu.files",
+        "icon": "/assets/images/apps/files-by-google/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
