@@ -1012,6 +1012,60 @@ const appCategories = [
     "slug": "tools",
     "apps": [
       {
+        "title": "PDF Reader: Documents Master",
+        "ratings": 3.7,
+        "appurl": "/app/com.pdfreader.master.utgerful",
+        "icon": "/assets/images/apps/pdf-reader-documents-master/icon.png"
+      },
+      {
+        "title": "Cleanup: Phone Storage Cleaner",
+        "ratings": 4.4,
+        "appurl": "/app/com.storage.androidcleaner",
+        "icon": "/assets/images/apps/cleanup-phone-storage-cleaner/icon.png"
+      },
+      {
+        "title": "Nora VPN – Fast & Secure VPN",
+        "ratings": 4.1,
+        "appurl": "/app/com.nora.vpn",
+        "icon": "/assets/images/apps/nora-vpn-fast-secure-vpn/icon.png"
+      },
+      {
+        "title": "Google Authenticator",
+        "ratings": 3.9,
+        "appurl": "/app/com.google.android.apps.authenticator2",
+        "icon": "/assets/images/apps/google-authenticator/icon.png"
+      },
+      {
+        "title": "Proton VPN: Secure & Fast VPN",
+        "ratings": 4.7,
+        "appurl": "/app/tech.protonvpn.androidst",
+        "icon": "/assets/images/apps/proton-vpn/icon.png"
+      },
+      {
+        "title": "Move to iOS",
+        "ratings": 3.6,
+        "appurl": "/app/com.apple.movetoios",
+        "icon": "/assets/images/apps/move-to-ios/icon.png"
+      },
+      {
+        "title": "QR & Barcode Scanner",
+        "ratings": 4.8,
+        "appurl": "/app/com.gamma.scan",
+        "icon": "/assets/images/apps/qr-barcode-scanner/icon.png"
+      },
+      {
+        "title": "Recovery Photo Ultra",
+        "ratings": 4.1,
+        "appurl": "/app/com.ultra.recovery.photo.video",
+        "icon": "/assets/images/apps/recovery-photo-ultra/icon.png"
+      },
+      {
+        "title": "Google Translate",
+        "ratings": 4.3,
+        "appurl": "/app/com.google.android.apps.translate",
+        "icon": "/assets/images/apps/google-translate/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
