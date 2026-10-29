@@ -1276,6 +1276,48 @@ const appCategories = [
         "icon": "/assets/images/apps/screen-mirroring-cast-to-tv/icon.png"
       },
       {
+        "title": "Notepad – Notes and To Do List",
+        "ratings": 4.2,
+        "appurl": "/app/com.ztnstudio.notepad",
+        "icon": "/assets/images/apps/notepad-notes/icon.png"
+      },
+      {
+        "title": "Canon PRINT",
+        "ratings": 4.5,
+        "appurl": "/app/jp.co.canon.bsd.ad.pixmaprint",
+        "icon": "/assets/images/apps/canon-print/icon.png"
+      },
+      {
+        "title": "AI Cleaner - Phone Cleaner",
+        "ratings": 4.3,
+        "appurl": "/app/ai.storage.cleaner.app",
+        "icon": "/assets/images/apps/ai-cleaner-phone-cleaner/icon.png"
+      },
+      {
+        "title": "App Lock - Lock & Unlock Apps",
+        "ratings": 4.4,
+        "appurl": "/app/app.locker.android.app",
+        "icon": "/assets/images/apps/app-lock/icon.png"
+      },
+      {
+        "title": "Calculator: Simple Calculator",
+        "ratings": 4.3,
+        "appurl": "/app/calculator.currencyconverter.tipcalculator.unitconverter",
+        "icon": "/assets/images/apps/calculator-simple-calculator/icon.png"
+      },
+      {
+        "title": "Multi App-Space",
+        "ratings": 3.6,
+        "appurl": "/app/co.keeptop.multi.space",
+        "icon": "/assets/images/apps/multi-app-space/icon.png"
+      },
+      {
+        "title": "Caller ID, Phone Number Lookup",
+        "ratings": 4.3,
+        "appurl": "/app/com.callblocker.whocalledme",
+        "icon": "/assets/images/apps/caller-id-phone-number-loockup/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
