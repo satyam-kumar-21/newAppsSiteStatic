@@ -1318,6 +1318,42 @@ const appCategories = [
         "icon": "/assets/images/apps/caller-id-phone-number-loockup/icon.png"
       },
       {
+        "title": "App Lock - Fingerprint Applock",
+        "ratings": 4.1,
+        "appurl": "/app/com.eco.applockfingerprint",
+        "icon": "/assets/images/apps/app-lock-fingerprint/icon.png"
+      },
+      {
+        "title": "Epson Smart Panel",
+        "ratings": 4.5,
+        "appurl": "/app/com.epson.epsonsmart",
+        "icon": "/assets/images/apps/epson-smart-panel/icon.png"
+      },
+      {
+        "title": "Go Translate All Languages",
+        "ratings": 4.5,
+        "appurl": "/app/com.fast.translatealllanguages.voice.translateapp.texttovoice.alllanguages.translator",
+        "icon": "/assets/images/apps/go-translate-all-languages/icon.png"
+      },
+      {
+        "title": "Tape Measure: Measuring Ruler",
+        "ratings": 4.2,
+        "appurl": "/app/com.grymala.photoruler",
+        "icon": "/assets/images/apps/tape-measure-measuring-ruler/icon.png"
+      },
+      {
+        "title": "Messenger SMS - Text Messages",
+        "ratings": 4.5,
+        "appurl": "/app/com.link.messages.sms",
+        "icon": "/assets/images/apps/messenger-sms-text/icon.png"
+      },
+      {
+        "title": "Digital Clock Widget",
+        "ratings": 4.3,
+        "appurl": "/app/com.maize.digitalClock",
+        "icon": "/assets/images/apps/digital-clock-widget/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
