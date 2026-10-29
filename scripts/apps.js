@@ -1354,6 +1354,18 @@ const appCategories = [
         "icon": "/assets/images/apps/digital-clock-widget/icon.png"
       },
       {
+        "title": "Open Browser - Smart & Safe",
+        "ratings": 4.7,
+        "appurl": "/app/com.open.web.ai.browser",
+        "icon": "/assets/images/apps/open-browser-smart-safe/icon.png"
+      },
+      {
+        "title": "PDF Viewer＆Scanner",
+        "ratings": 3.8,
+        "appurl": "/app/com.pdfviewer.scanner",
+        "icon": "/assets/images/apps/pdf-viewer-scanner/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
