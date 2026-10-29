@@ -5959,6 +5959,58 @@
             ]
           },
           {
+            "appurl": "/app/com.open.web.ai.browser/",
+            "title": "Open Browser - Smart & Safe",
+            "icon": "/assets/images/apps/open-browser-smart-safe/icon.png",
+            "ratings": 4.7,
+            "ratings-counts": "273K reviews",
+            "downloads": "10M+",
+            "category": "Tools",
+            "latest-version": "1.9.1",
+            "publish-date": "04/21/2025",
+            "developer": "AdPulse INC",
+            "security": "100% Safe",
+            "price": "Free",
+            "description1": "<h3>Features of Open Browser - Smart &amp; Safe</h3><h6>User-Friendly Interface</h6><p>Open Browser - Smart &amp; Safe offers a clean, intuitive interface designed to make web browsing simple and convenient. Its straightforward navigation helps users access websites and browser tools without unnecessary complexity or distractions.</p><h6>Privacy and Security Features</h6><p>The browser may provide privacy-focused tools such as ad blocking and private browsing to help users manage their online experience. Keep in mind that private browsing does not make you completely anonymous, and available protection depends on the app's features and settings.</p><h6>Fast Browsing Experience</h6><p>Open Browser - Smart &amp; Safe is designed to provide a responsive browsing experience with smooth navigation and convenient access to web pages. Actual loading speeds may vary depending on your internet connection, device performance, website content, and browser settings.</p>",
+            "playstore-url": "https://play.google.com/store/apps/details?id=com.open.web.ai.browser&hl=en&gl=us",
+            "screenshots": [
+              "/assets/images/apps/open-browser-smart-safe/screenshot-1.webp",
+              "/assets/images/apps/open-browser-smart-safe/screenshot-2.webp",
+              "/assets/images/apps/open-browser-smart-safe/screenshot-3.webp",
+              "/assets/images/apps/open-browser-smart-safe/screenshot-4.webp",
+              "/assets/images/apps/open-browser-smart-safe/screenshot-5.webp",
+              "/assets/images/apps/open-browser-smart-safe/screenshot-6.webp"
+            ]
+          },
+          {
+            "appurl": "/app/com.pdfviewer.scanner/",
+            "title": "PDF Viewer＆Scanner",
+            "icon": "/assets/images/apps/pdf-viewer-scanner/icon.png",
+            "ratings": 3.8,
+            "ratings-counts": "33.1K reviews",
+            "downloads": "10M+",
+            "category": "Tools",
+            "latest-version": "1.3.1",
+            "publish-date": "07/05/2024",
+            "developer": "Emily Yu",
+            "security": "100% Safe",
+            "price": "Free",
+            "description1": "<h3>Features of PDF Viewer &amp; Scanner</h3><h6>User-Friendly Interface</h6><p>PDF Viewer &amp; Scanner features a clean, intuitive interface that makes it easy to navigate documents and access scanning tools. Its straightforward design helps users view PDFs and manage documents conveniently.</p><h6>Document Scanning and Enhancement</h6><p>The app provides document scanning features designed to capture clear digital copies of paper documents. Where supported, automatic edge detection and image enhancement tools can help align pages, improve readability, and create more polished scans.</p><h6>Multi-Format Support</h6><p>In addition to viewing PDF files, the app may support other document formats and tools for converting or editing files. Available formats and editing options depend on the app version, helping users manage compatible documents in one place.</p>",
+            "playstore-url": "https://play.google.com/store/apps/details?id=com.pdfviewer.scanner&hl=en&gl=us",
+            "screenshots": [
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-1.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-2.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-3.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-4.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-5.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-6.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-7.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-8.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-9.webp",
+              "/assets/images/apps/pdf-viewer-scanner/screenshot-10.webp"
+            ]
+          },
+          {
             "appurl": "/app/test/",
             "title": "Test",
             "icon": "/assets/images/apps/test1/icon.png",
