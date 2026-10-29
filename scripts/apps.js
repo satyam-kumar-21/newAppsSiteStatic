@@ -1204,6 +1204,78 @@ const appCategories = [
         "icon": "/assets/images/apps/zapya-file-transfer/icon.png"
       },
       {
+        "title": "TeraBox: 1TB Cloud & AI Space",
+        "ratings": 4.4,
+        "appurl": "/app/com.dubox.drive",
+        "icon": "/assets/images/apps/terabox/icon.png"
+      },
+      {
+        "title": "Secure VPN－Safer Internet",
+        "ratings": 4.7,
+        "appurl": "/app/com.fast.free.unblock.secure.vpn",
+        "icon": "/assets/images/apps/secure-vpn-safer-internet/icon.png"
+      },
+      {
+        "title": "Thunder VPN - Fast, Safe VPN",
+        "ratings": 4.8,
+        "appurl": "/app/com.fast.free.unblock.thunder.vpn",
+        "icon": "/assets/images/apps/thunder-vpn/icon.png"
+      },
+      {
+        "title": "Google Family Link",
+        "ratings": 4.6,
+        "appurl": "/app/com.google.android.apps.kids.familylink",
+        "icon": "/assets/images/apps/google-family-link/icon.png"
+      },
+      {
+        "title": "CCleaner – Phone Cleaner",
+        "ratings": 4.5,
+        "appurl": "/app/com.piriform.ccleaner",
+        "icon": "/assets/images/apps/ccleaner-phone-cleaner/icon.png"
+      },
+      {
+        "title": "RAR",
+        "ratings": 4.2,
+        "appurl": "/app/com.rarlab.rar",
+        "icon": "/assets/images/apps/rar/icon.png"
+      },
+      {
+        "title": "All Video Downloader & Player",
+        "ratings": 4.5,
+        "appurl": "/app/videoplayer.videodownloader.downloader",
+        "icon": "/assets/images/apps/all-video-downloader-and-player/icon.png"
+      },
+      {
+        "title": "Clean Master Ultra Security",
+        "ratings": 4.4,
+        "appurl": "/app/cmu.cleanmaster.new.app",
+        "icon": "/assets/images/apps/clean-master-ultra-security/icon.png"
+      },
+      {
+        "title": "HideU: Calculator Lock",
+        "ratings": 4.3,
+        "appurl": "/app/com.calculator.hideu",
+        "icon": "/assets/images/apps/hideu-calculator-lock/icon.png"
+      },
+      {
+        "title": "Microsoft Bing Search",
+        "ratings": 4.6,
+        "appurl": "/app/com.microsoft.bing",
+        "icon": "/assets/images/apps/microsoft-bing-search/icon.png"
+      },
+      {
+        "title": "X-VPN: Fast VPN & Secure Proxy",
+        "ratings": 4.5,
+        "appurl": "/app/com.security.xvpn.z35kb",
+        "icon": "/assets/images/apps/x-vpn/icon.png"
+      },
+      {
+        "title": "Screen Mirroring Cast to TV",
+        "ratings": 4.4,
+        "appurl": "/app/com.soomapps.screenmirroring",
+        "icon": "/assets/images/apps/screen-mirroring-cast-to-tv/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
