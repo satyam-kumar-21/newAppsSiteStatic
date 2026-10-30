@@ -1450,6 +1450,60 @@ const appCategories = [
         "icon": "/assets/images/apps/google-fi-wireless/icon.png"
       },
       {
+        "title": "Kimi",
+        "ratings": 4,
+        "appurl": "/app/com.moonshot.kimichat",
+        "icon": "/assets/images/apps/kimi/icon.png"
+      },
+      {
+        "title": "GPS Location & Phone Tracker",
+        "ratings": 4.2,
+        "appurl": "/app/com.quicktool.gpstracker",
+        "icon": "/assets/images/apps/gps-location-phone-tracker/icon.png"
+      },
+      {
+        "title": "PhotoRescue-Recover Files",
+        "ratings": 3.4,
+        "appurl": "/app/com.rescue.psoeprs.solf",
+        "icon": "/assets/images/apps/photo-rescue-recover-files/icon.png"
+      },
+      {
+        "title": "Notes",
+        "ratings": 4.8,
+        "appurl": "/app/com.task.notes",
+        "icon": "/assets/images/apps/Notes/icon.png"
+      },
+      {
+        "title": "VIP Access",
+        "ratings": 3.4,
+        "appurl": "/app/com.verisign.mvip.main",
+        "icon": "/assets/images/apps/vip-access/icon.png"
+      },
+      {
+        "title": "PDF Reader, All PDF Editor",
+        "ratings": 4,
+        "appurl": "/app/pdfreader.proeditor.freepdfviewer",
+        "icon": "/assets/images/apps/pdf-reader-all-pdf-editor/icon.png"
+      },
+      {
+        "title": "AdGuard VPN — private proxy",
+        "ratings": 4.4,
+        "appurl": "/app/com.adguard.vpn",
+        "icon": "/assets/images/apps/adguard-vpn-private-proxy/icon.png"
+      },
+      {
+        "title": "dynamicSpot - Dynamic Island",
+        "ratings": 4.4,
+        "appurl": "/app/com.jamworks.dynamicspot",
+        "icon": "/assets/images/apps/dynamic-spot/icon.png"
+      },
+      {
+        "title": "Location Changer - Fake GPS",
+        "ratings": 4.6,
+        "appurl": "/app/com.locationchanger",
+        "icon": "/assets/images/apps/location-changer-fake-gps/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
