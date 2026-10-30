@@ -1366,10 +1366,94 @@ const appCategories = [
         "icon": "/assets/images/apps/pdf-viewer-scanner/icon.png"
       },
       {
+        "title": "Sony | Sound Connect",
+        "ratings": 4.4,
+        "appurl": "/app/com.sony.songpal.mdr",
+        "icon": "/assets/images/apps/sony-sound-connect/icon.png"
+      },
+      {
+        "title": "Auto Click - Automatic Clicker",
+        "ratings": 4,
+        "appurl": "/app/com.speed.gc.autoclicker.automatictap",
+        "icon": "/assets/images/apps/auto-click-automatic-clicker/icon.png"
+      },
+      {
+        "title": "Speedify: Bond Satellite + 5G",
+        "ratings": 3.6,
+        "appurl": "/app/om.speedify.speedifyandroid",
+        "icon": "/assets/images/apps/speedify-bond-satellite/icon.png"
+      },
+      {
+        "title": "Digital Compass",
+        "ratings": 4.7,
+        "appurl": "/app/com.vincentlee.compass",
+        "icon": "/assets/images/apps/digital-compass/icon.png"
+      },
+      {
+        "title": "AR Sketch Studio",
+        "ratings": 4.3,
+        "appurl": "/app/com.wedraw.aidraw",
+        "icon": "/assets/images/apps/ar-sketch-studio/icon.png"
+      },
+      {
+        "title": "Spatial Touch™ - Air Gestures",
+        "ratings": 3.9,
+        "appurl": "/app/io.vtouch.spatial_touch",
+        "icon": "/assets/images/apps/spatial-touch/icon.png"
+      },
+      {
+        "title": "Pokémon HOME",
+        "ratings": 3.7,
+        "appurl": "/app/jp.pokemon.pokemonhome",
+        "icon": "/assets/images/apps/pokemon-home/icon.png"
+      },
+      {
+        "title": "Screen Recorder",
+        "ratings": 4.1,
+        "appurl": "/app/net.diflib.recorderx",
+        "icon": "/assets/images/apps/screen-recorder/icon.png"
+      },
+      {
+        "title": "Smart Printer: Print Documents",
+        "ratings": 4,
+        "appurl": "/app/tech.kma.smart.printer",
+        "icon": "/assets/images/apps/smart-printer-print-documents/icon.png"
+      },
+      {
+        "title": "Settings",
+        "ratings": 4.1,
+        "appurl": "/app/app.wizyemm.settings",
+        "icon": "/assets/images/apps/settings/icon.png"
+      },
+      {
+        "title": "SmartCut, AI Video Editor",
+        "ratings": 4.1,
+        "appurl": "/app/com.aivideoeditor.videomaker",
+        "icon": "/assets/images/apps/smart-cut-ai-video-editor/icon.png"
+      },
+      {
+        "title": "Cyber Cleaner",
+        "ratings": 3.7,
+        "appurl": "/app/com.cyber.clean",
+        "icon": "/assets/images/apps/cyber-cleaner/icon.png"
+      },
+      {
+        "title": "GPS Camera with Time Stamp",
+        "ratings": 3.2,
+        "appurl": "/app/com.geotag.camera.location.mapgps",
+        "icon": "/assets/images/apps/gps-camera-with-time-stamp/icon.png"
+      },
+      {
+        "title": "Google Fi Wireless",
+        "ratings": 4.1,
+        "appurl": "/app/com.google.android.apps.tycho",
+        "icon": "/assets/images/apps/google-fi-wireless/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
-        "icon": "/assets/images/apps/test1/icon.png"
+        "icon": "/assets/images/apps/test/icon.png"
       }
     ]
   }
