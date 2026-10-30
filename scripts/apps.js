@@ -1504,6 +1504,96 @@ const appCategories = [
         "icon": "/assets/images/apps/location-changer-fake-gps/icon.png"
       },
       {
+        "title": "HeyAlex Setup Voice Command",
+        "ratings": 3.5,
+        "appurl": "/app/com.maplelabs.alexa",
+        "icon": "/assets/images/apps/heyalex-setup-voice-command/icon.png"
+      },
+      {
+        "title": "English Spanish Translator",
+        "ratings": 4.7,
+        "appurl": "/app/com.newbee.estra",
+        "icon": "/assets/images/apps/english-spanish-translator/icon.png"
+      },
+      {
+        "title": "Don't Touch Security Alarm",
+        "ratings": 4.5,
+        "appurl": "/app/com.privotech.donottouch",
+        "icon": "/assets/images/apps/do-not-touch-security-alarm/icon.png"
+      },
+      {
+        "title": "Authenticator",
+        "ratings": 4.2,
+        "appurl": "/app/com.smmservice.authenticator",
+        "icon": "/assets/images/apps/Authenticator/icon.png"
+      },
+      {
+        "title": "Outline",
+        "ratings": 4.3,
+        "appurl": "/app/org.outline.android.client",
+        "icon": "/assets/images/apps/Outline/icon.png"
+      },
+      {
+        "title": "Translate - Translator App",
+        "ratings": 4.5,
+        "appurl": "/app/translate.photo.translator.all.language.voice.translation.free.app",
+        "icon": "/assets/images/apps/translate-translator-app/icon.png"
+      },
+      {
+        "title": "CleanMax Pro",
+        "ratings": 4.6,
+        "appurl": "/app/com.cleanmax.pro",
+        "icon": "/assets/images/apps/clean-max-pro/icon.png"
+      },
+      {
+        "title": "Live Wallpaper: 4K & Video",
+        "ratings": 4,
+        "appurl": "/app/com.easyapp.tool.live.wallpaper",
+        "icon": "/assets/images/apps/live-wallpaper-4k-video/icon.png"
+      },
+      {
+        "title": "PC Builder: Part Picker",
+        "ratings": 4.8,
+        "appurl": "/app/com.indraanisa.pcbuilder",
+        "icon": "/assets/images/apps/pc-builder-part-picker/icon.png"
+      },
+      {
+        "title": "Smart View for Samsung TV Cast",
+        "ratings": 3.1,
+        "appurl": "/app/com.casttotv.screenmirroring.smartview.smarttvlcd",
+        "icon": "/assets/images/apps/smart-view-for-samsung-tv-cast/icon.png"
+      },
+      {
+        "title": "Extra Space Storage",
+        "ratings": 4.2,
+        "appurl": "/app/com.extraspace.aspen",
+        "icon": "/assets/images/apps/extra-space-storage/icon.png"
+      },
+      {
+        "title": "TruePeopleSearch.com",
+        "ratings": 3.9,
+        "appurl": "/app/com.freedataservices.truepeoplesearch",
+        "icon": "/assets/images/apps/TruePeopleSearch/icon.png"
+      },
+      {
+        "title": "White Screen",
+        "ratings": 4.7,
+        "appurl": "/app/com.hungrydroid.whitescreen",
+        "icon": "/assets/images/apps/white-screen/icon.png"
+      },
+      {
+        "title": "MyMap",
+        "ratings": 3.7,
+        "appurl": "/app/com.ofaapps.mymap",
+        "icon": "/assets/images/apps/my-map/icon.png"
+      },
+      {
+        "title": "Random Number Generator",
+        "ratings": 4.5,
+        "appurl": "/app/mch.pavel.randomizer",
+        "icon": "/assets/images/apps/random-number-generator/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
