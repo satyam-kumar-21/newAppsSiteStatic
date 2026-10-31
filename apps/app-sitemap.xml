@@ -4,6 +4,7 @@
   <url><loc>https://domain.com/apps/entertainment</loc></url>
   <url><loc>https://domain.com/apps/shopping</loc></url>
   <url><loc>https://domain.com/apps/tools</loc></url>
+  <url><loc>https://domain.com/apps/productivity</loc></url>
   <url><loc>https://domain.com/app/com.ss.android.ugc.tiktok.pro</loc></url>
   <url><loc>https://domain.com/app/com.google.android.apps.youtube.kids</loc></url>
   <url><loc>https://domain.com/app/com.blink.drama.player</loc></url>
@@ -267,5 +268,18 @@
   <url><loc>https://domain.com/app/com.hungrydroid.whitescreen</loc></url>
   <url><loc>https://domain.com/app/com.ofaapps.mymap</loc></url>
   <url><loc>https://domain.com/app/mch.pavel.randomizer</loc></url>
+  <url><loc>https://domain.com/app/radonsoft.net.myip</loc></url>
+  <url><loc>https://domain.com/app/com.facebook.aura</loc></url>
+  <url><loc>https://domain.com/app/com.openai.chatgpt</loc></url>
+  <url><loc>https://domain.com/app/ai.x.grok.bot</loc></url>
+  <url><loc>https://domain.com/app/ai.x.grok</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.office.word</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.bard</loc></url>
+  <url><loc>https://domain.com/app/com.adobe.reader</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.docs.editors.docs</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.office.excel</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.docs</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.calendar</loc></url>
+  <url><loc>https://domain.com/app/com.dropbox.android</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
 </urlset>

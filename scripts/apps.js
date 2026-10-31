@@ -1594,6 +1594,90 @@ const appCategories = [
         "icon": "/assets/images/apps/random-number-generator/icon.png"
       },
       {
+        "title": "MyIP",
+        "ratings": 2.7,
+        "appurl": "/app/radonsoft.net.myip",
+        "icon": "/assets/images/apps/my-ip/icon.png"
+      }
+    ]
+  },
+  {
+    "name": "Productivity",
+    "slug": "productivity",
+    "apps": [
+      {
+        "title": "Muse from Meta",
+        "ratings": 4.7,
+        "appurl": "/app/com.facebook.aura",
+        "icon": "/assets/images/apps/muse-from-meta/icon.png"
+      },
+      {
+        "title": "ChatGPT",
+        "ratings": 4.8,
+        "appurl": "/app/com.openai.chatgpt",
+        "icon": "/assets/images/apps/chat-gpt/icon.png"
+      },
+      {
+        "title": "Grok Bot",
+        "ratings": 4.8,
+        "appurl": "/app/ai.x.grok.bot",
+        "icon": "/assets/images/apps/grok-bot/icon.png"
+      },
+      {
+        "title": "Grok",
+        "ratings": 4.9,
+        "appurl": "/app/ai.x.grok",
+        "icon": "/assets/images/apps/Grok/icon.png"
+      },
+      {
+        "title": "Microsoft Word: Edit Documents",
+        "ratings": 4.8,
+        "appurl": "/app/com.microsoft.office.word",
+        "icon": "/assets/images/apps/microsoft-word/icon.png"
+      },
+      {
+        "title": "Google Gemini",
+        "ratings": 4.5,
+        "appurl": "/app/com.google.android.apps.bard",
+        "icon": "/assets/images/apps/google-gemini/icon.png"
+      },
+      {
+        "title": "Adobe Acrobat Reader: PDF Editor",
+        "ratings": 4.5,
+        "appurl": "/app/com.adobe.reader",
+        "icon": "/assets/images/apps/adobe-acrobat-reader/icon.png"
+      },
+      {
+        "title": "Google Docs",
+        "ratings": 4.7,
+        "appurl": "/app/com.google.android.apps.docs.editors.docs",
+        "icon": "/assets/images/apps/google-docs/icon.png"
+      },
+      {
+        "title": "Microsoft Excel: Spreadsheets",
+        "ratings": 4.8,
+        "appurl": "/app/com.microsoft.office.excel",
+        "icon": "/assets/images/apps/microsoft-excel/icon.png"
+      },
+      {
+        "title": "Google Drive",
+        "ratings": 4.3,
+        "appurl": "/app/com.google.android.apps.docs",
+        "icon": "/assets/images/apps/google-drive/icon.png"
+      },
+      {
+        "title": "Google Calendar",
+        "ratings": 4.6,
+        "appurl": "/app/com.google.android.calendar",
+        "icon": "/assets/images/apps/google-calender/icon.png"
+      },
+      {
+        "title": "Dropbox: Secure Cloud Storage",
+        "ratings": 4.4,
+        "appurl": "/app/com.dropbox.android",
+        "icon": "/assets/images/apps/dropbox-secure-cloud-storage/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
