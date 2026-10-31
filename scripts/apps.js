@@ -1732,6 +1732,24 @@ const appCategories = [
         "icon": "/assets/images/apps/microsoft-powerpoint/icon.png"
       },
       {
+        "title": "Microsoft OneDrive",
+        "ratings": 4.6,
+        "appurl": "/app/com.microsoft.skydrive",
+        "icon": "/assets/images/apps/microsoft-onedrive/icon.png"
+      },
+      {
+        "title": "Samsung Email",
+        "ratings": 4.4,
+        "appurl": "/app/com.samsung.android.email.provider",
+        "icon": "/assets/images/apps/samsung-email/icon.png"
+      },
+      {
+        "title": "WPS Office-PDF, Word, Sheet",
+        "ratings": 4.3,
+        "appurl": "/app/cn.wps.moffice_eng",
+        "icon": "/assets/images/apps/wps-office-pdf-word-sheet/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",

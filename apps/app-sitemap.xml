@@ -290,5 +290,8 @@
   <url><loc>https://domain.com/app/com.microsoft.office.onenote</loc></url>
   <url><loc>https://domain.com/app/com.microsoft.office.outlook</loc></url>
   <url><loc>https://domain.com/app/com.microsoft.office.powerpoint</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.skydrive</loc></url>
+  <url><loc>https://domain.com/app/com.samsung.android.email.provider</loc></url>
+  <url><loc>https://domain.com/app/cn.wps.moffice_eng</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
 </urlset>
