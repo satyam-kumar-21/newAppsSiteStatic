@@ -293,5 +293,13 @@
   <url><loc>https://domain.com/app/com.microsoft.skydrive</loc></url>
   <url><loc>https://domain.com/app/com.samsung.android.email.provider</loc></url>
   <url><loc>https://domain.com/app/cn.wps.moffice_eng</loc></url>
+  <url><loc>https://domain.com/app/com.hp.android.printservice</loc></url>
+  <url><loc>https://domain.com/app/com.jio.myjio</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.appmanager</loc></url>
+  <url><loc>https://domain.com/app/ai.perplexity.app.android</loc></url>
+  <url><loc>https://domain.com/app/com.digilocker.android</loc></url>
+  <url><loc>https://domain.com/app/com.facebook.stella</loc></url>
+  <url><loc>https://domain.com/app/com.hp.printercontrol</loc></url>
+  <url><loc>https://domain.com/app/com.intsig.camscanner</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
 </urlset>

@@ -1750,6 +1750,54 @@ const appCategories = [
         "icon": "/assets/images/apps/wps-office-pdf-word-sheet/icon.png"
       },
       {
+        "title": "HP Print Service Plugin",
+        "ratings": 4.1,
+        "appurl": "/app/com.hp.android.printservice",
+        "icon": "/assets/images/apps/hp-print-service-plugin/icon.png"
+      },
+      {
+        "title": "MyJio: For Everything Jio",
+        "ratings": 4.4,
+        "appurl": "/app/com.jio.myjio",
+        "icon": "/assets/images/apps/myjio/icon.png"
+      },
+      {
+        "title": "Link to Windows",
+        "ratings": 3.9,
+        "appurl": "/app/com.microsoft.appmanager",
+        "icon": "/assets/images/apps/link-to-windows/icon.png"
+      },
+      {
+        "title": "Perplexity - Ask Anything",
+        "ratings": 4.6,
+        "appurl": "/app/ai.perplexity.app.android",
+        "icon": "/assets/images/apps/Perplexity/icon.png"
+      },
+      {
+        "title": "DigiLocker",
+        "ratings": 4,
+        "appurl": "/app/com.digilocker.android",
+        "icon": "/assets/images/apps/DigiLocker/icon.png"
+      },
+      {
+        "title": "Meta AI",
+        "ratings": 4.6,
+        "appurl": "/app/com.facebook.stella",
+        "icon": "/assets/images/apps/meta-ai/icon.png"
+      },
+      {
+        "title": "HP",
+        "ratings": 4.2,
+        "appurl": "/app/com.hp.printercontrol",
+        "icon": "/assets/images/apps/hp/icon.png"
+      },
+      {
+        "title": "CamScanner- scanner, PDF maker",
+        "ratings": 4.6,
+        "appurl": "/app/com.intsig.camscanner",
+        "icon": "/assets/images/apps/camscanner/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
