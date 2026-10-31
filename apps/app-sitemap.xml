@@ -281,5 +281,14 @@
   <url><loc>https://domain.com/app/com.google.android.apps.docs</loc></url>
   <url><loc>https://domain.com/app/com.google.android.calendar</loc></url>
   <url><loc>https://domain.com/app/com.dropbox.android</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.docs.editors.sheets</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.docs.editors.slides</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.googleassistant</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.apps.subscriptions.red</loc></url>
+  <url><loc>https://domain.com/app/com.google.android.keep</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.office.officehubrow</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.office.onenote</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.office.outlook</loc></url>
+  <url><loc>https://domain.com/app/com.microsoft.office.powerpoint</loc></url>
   <url><loc>https://domain.com/app/test</loc></url>
 </urlset>

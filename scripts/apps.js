@@ -1678,6 +1678,60 @@ const appCategories = [
         "icon": "/assets/images/apps/dropbox-secure-cloud-storage/icon.png"
       },
       {
+        "title": "Google Sheets",
+        "ratings": 4.7,
+        "appurl": "/app/com.google.android.apps.docs.editors.sheets",
+        "icon": "/assets/images/apps/google-sheets/icon.png"
+      },
+      {
+        "title": "Google Slides",
+        "ratings": 4.4,
+        "appurl": "/app/com.google.android.apps.docs.editors.slides",
+        "icon": "/assets/images/apps/google-slides/icon.png"
+      },
+      {
+        "title": "Google Assistant",
+        "ratings": 3.8,
+        "appurl": "/app/com.google.android.apps.googleassistant",
+        "icon": "/assets/images/apps/google-assistant/icon.png"
+      },
+      {
+        "title": "Google One",
+        "ratings": 4.1,
+        "appurl": "/app/com.google.android.apps.subscriptions.red",
+        "icon": "/assets/images/apps/google-one/icon.png"
+      },
+      {
+        "title": "Google Keep - Notes and lists",
+        "ratings": 4.7,
+        "appurl": "/app/com.google.android.keep",
+        "icon": "/assets/images/apps/google-keep-notes-and-lists/icon.png"
+      },
+      {
+        "title": "Microsoft Copilot",
+        "ratings": 4.5,
+        "appurl": "/app/com.microsoft.office.officehubrow",
+        "icon": "/assets/images/apps/microsoft-copilot/icon.png"
+      },
+      {
+        "title": "Microsoft OneNote: Save Notes",
+        "ratings": 4.5,
+        "appurl": "/app/com.microsoft.office.onenote",
+        "icon": "/assets/images/apps/microsoft-one-note/icon.png"
+      },
+      {
+        "title": "Microsoft Outlook",
+        "ratings": 4.3,
+        "appurl": "/app/com.microsoft.office.outlook",
+        "icon": "/assets/images/apps/microsoft-outlook/icon.png"
+      },
+      {
+        "title": "Microsoft PowerPoint",
+        "ratings": 4.8,
+        "appurl": "/app/com.microsoft.office.powerpoint",
+        "icon": "/assets/images/apps/microsoft-powerpoint/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
