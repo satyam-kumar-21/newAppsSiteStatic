@@ -1828,6 +1828,102 @@ const appCategories = [
         "icon": "/assets/images/apps/TeamViewer-QuickSupport/icon.png"
       },
       {
+        "title": "Open Chat - AI bot app",
+        "ratings": 4.6,
+        "appurl": "/app/open.chat.gpt.aichat.bot.free.app",
+        "icon": "/assets/images/apps/open-chat-ai-bot-app/icon.png"
+      },
+      {
+        "title": "Aloha Browser - Private VPN",
+        "ratings": 4.8,
+        "appurl": "/app/com.aloha.browser",
+        "icon": "/assets/images/apps/aloha-browser/icon.png"
+      },
+      {
+        "title": "AI Chat: Ask AI Chat Anything",
+        "ratings": 4.5,
+        "appurl": "/app/com.chatbot.ai.aichat.openaibot.chat",
+        "icon": "/assets/images/apps/ai-chat-ask-ai-chat-anything/icon.png"
+      },
+      {
+        "title": "Chrome Beta",
+        "ratings": 4.3,
+        "appurl": "/app/com.chrome.beta",
+        "icon": "/assets/images/apps/chrome-beta/icon.png"
+      },
+      {
+        "title": "Docusign - Upload & Sign Docs",
+        "ratings": 4.8,
+        "appurl": "/app/com.docusign.ink",
+        "icon": "/assets/images/apps/Docusign/icon.png"
+      },
+      {
+        "title": "Gemini Notebook",
+        "ratings": 4.7,
+        "appurl": "/app/com.google.android.apps.labs.language.tailwind",
+        "icon": "/assets/images/apps/gemini-notebook/icon.png"
+      },
+      {
+        "title": "Google Tasks",
+        "ratings": 4.6,
+        "appurl": "/app/com.google.android.apps.tasks",
+        "icon": "/assets/images/apps/google-tasks/icon.png"
+      },
+      {
+        "title": "Okta Verify",
+        "ratings": 3.9,
+        "appurl": "/app/com.okta.android.auth",
+        "icon": "/assets/images/apps/okta-verify/icon.png"
+      },
+      {
+        "title": "Verizon Content Transfer",
+        "ratings": 4.4,
+        "appurl": "/app/com.verizon.contenttransfer",
+        "icon": "/assets/images/apps/verizon-content-transfer/icon.png"
+      },
+      {
+        "title": "Spaces: Follow Businesses",
+        "ratings": 4.2,
+        "appurl": "/app/com.wix.android",
+        "icon": "/assets/images/apps/speces-follow-businesses/icon.png"
+      },
+      {
+        "title": "Accio: Alibaba AI Agent",
+        "ratings": 4.4,
+        "appurl": "/app/com.accio.android.app",
+        "icon": "/assets/images/apps/accio-alibaba-ai-agent/icon.png"
+      },
+      {
+        "title": "Email - Fast & Secure Mail",
+        "ratings": 4.5,
+        "appurl": "/app/com.easilydo.mail",
+        "icon": "/assets/images/apps/email-fast-secure-mail/icon.png"
+      },
+      {
+        "title": "Gallery",
+        "ratings": 3.8,
+        "appurl": "/app/com.gallery.photo.gallerypro",
+        "icon": "/assets/images/apps/Gallery/icon.png"
+      },
+      {
+        "title": "Microsoft SharePoint",
+        "ratings": 3.9,
+        "appurl": "/app/com.microsoft.sharepoint",
+        "icon": "/assets/images/apps/microsoft-sharepoint/icon.png"
+      },
+      {
+        "title": "Amerigo",
+        "ratings": 4.6,
+        "appurl": "/app/it.ideasolutions.amerigo",
+        "icon": "/assets/images/apps/Amerigo/icon.png"
+      },
+      {
+        "title": "Translate - Translator",
+        "ratings": 4.7,
+        "appurl": "/app/translate.voice.translator.camera.translation.free.all.language.app",
+        "icon": "/assets/images/apps/translate-translator/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
