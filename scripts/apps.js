@@ -1924,6 +1924,54 @@ const appCategories = [
         "icon": "/assets/images/apps/translate-translator/icon.png"
       },
       {
+        "title": "FLY PDF",
+        "ratings": 3.1,
+        "appurl": "/app/com.fly.hong.pdfreader",
+        "icon": "/assets/images/apps/fly-pdf/icon.png"
+      },
+      {
+        "title": "GitHub",
+        "ratings": 4.8,
+        "appurl": "/app/com.github.android",
+        "icon": "/assets/images/apps/github/icon.png"
+      },
+      {
+        "title": "App Hunt - AI Apps Store",
+        "ratings": 3.6,
+        "appurl": "/app/com.vau.apphunt.studiotech",
+        "icon": "/assets/images/apps/app-hunt/icon.png"
+      },
+      {
+        "title": "Wix - Website Builder",
+        "ratings": 3.5,
+        "appurl": "/app/com.wix.admin",
+        "icon": "/assets/images/apps/wix-website-builder/icon.png"
+      },
+      {
+        "title": "Wordpad Plus: Word Processor",
+        "ratings": 4.2,
+        "appurl": "/app/word.text.editor.wordpad",
+        "icon": "/assets/images/apps/wordpad-plus/icon.png"
+      },
+      {
+        "title": "OBS: Studio Android Hep",
+        "ratings": 2.2,
+        "appurl": "/app/com.bus.app.mnf",
+        "icon": "/assets/images/apps/obs-studio-android-hep/icon.png"
+      },
+      {
+        "title": "Dell AR Assistant",
+        "ratings": 3.2,
+        "appurl": "/app/com.dell.arassist",
+        "icon": "/assets/images/apps/dell-ar-assistant/icon.png"
+      }
+    ]
+  },
+  {
+    "name": "Finance",
+    "slug": "finance",
+    "apps": [
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
