@@ -1972,6 +1972,30 @@ const appCategories = [
     "slug": "finance",
     "apps": [
       {
+        "title": "Kalshi: Trade Sports & Events",
+        "ratings": 4.7,
+        "appurl": "/app/com.kalshi.mobile",
+        "icon": "/assets/images/apps/kalshi/icon.png"
+      },
+      {
+        "title": "Freecash: Earn Money",
+        "ratings": 4.6,
+        "appurl": "/app/com.freecash.app2",
+        "icon": "/assets/images/apps/freecash-earn-money/icon.png"
+      },
+      {
+        "title": "OnePay – Mobile Banking",
+        "ratings": 4.8,
+        "appurl": "/app/com.onefinance.one",
+        "icon": "/assets/images/apps/onepay-mobile-banking/icon.png"
+      },
+      {
+        "title": "PayPal - Pay, Send, Save",
+        "ratings": 4.2,
+        "appurl": "/app/com.paypal.android.p2pmobile",
+        "icon": "/assets/images/apps/paypal/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
