@@ -1798,6 +1798,36 @@ const appCategories = [
         "icon": "/assets/images/apps/camscanner/icon.png"
       },
       {
+        "title": "Vi: Recharge & Payments",
+        "ratings": 4.7,
+        "appurl": "/app/com.mventus.selfcare.activity",
+        "icon": "/assets/images/apps/vi-recharge-payments/icon.png"
+      },
+      {
+        "title": "Verizon Cloud",
+        "ratings": 4.1,
+        "appurl": "/app/com.vcast.mediamanager",
+        "icon": "/assets/images/apps/verizon-cloud/icon.png"
+      },
+      {
+        "title": "Easy Voice Recorder",
+        "ratings": 4.7,
+        "appurl": "/app/com.coffeebeanventures.easyvoicerecorder",
+        "icon": "/assets/images/apps/easy-voice-recorder/icon.png"
+      },
+      {
+        "title": "DeepSeek - AI Assistant",
+        "ratings": 3.7,
+        "appurl": "/app/com.deepseek.chat",
+        "icon": "/assets/images/apps/DeepSeek/icon.png"
+      },
+      {
+        "title": "TeamViewer QuickSupport",
+        "ratings": 4.3,
+        "appurl": "/app/com.teamviewer.quicksupport.market",
+        "icon": "/assets/images/apps/TeamViewer-QuickSupport/icon.png"
+      },
+      {
         "title": "Test",
         "ratings": 4.2,
         "appurl": "/app/test",
